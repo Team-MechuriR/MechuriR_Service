@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechuri_r/providers/counts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,15 +7,15 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MechuriR',  // AppName
+    return MaterialApp(title: 'MechuriR',  // AppName
       themeMode: ThemeMode.light,
       theme: ThemeData(
         brightness: Brightness.light, // LightMode
-        //primaryColor: Color(0xffF3EFE4), // 강조색
         scaffoldBackgroundColor: Color(0xffF3EFE4), // 앱 배경색
+
 
         // AppBar
         appBarTheme: const AppBarTheme(
@@ -24,85 +25,116 @@ class MyApp extends StatelessWidget {
 
         // FloatingActionButton
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color(0xffD4C4AB) // 플로팅 버튼 배경색
+            backgroundColor: Color(0xffD4C4AB) // 플로팅 버튼 배경색
         ),
-
-        textTheme: const TextTheme(
-
-        )
-        //Define the default font family.
-        //fontFamily: '',
-        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        //useMaterial3: true,
       ),
-      home: const MyHomePage(title: ''),
-    );
+      home: const LoginPage(),);
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,  // 가운데 정렬
-        title: Image.asset('logo.png', height: 30,) // 로고 이미지
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+        body: ListView(
+          controller: ScrollController(),
+          children: [
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset('images/logo.png', width: 100, height: 100,),
+                  SizedBox(width: 277, height: 46,
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xffFAE100), // 배경색
+                          onPrimary: Color(0xff3C1E1E), // 글자색
+                          shadowColor: Color(0xffC8C8C8), // 그림자색
+                          shape: RoundedRectangleBorder( // radius
+                              borderRadius: BorderRadius.circular(10)
+                          )
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('images/kakao_icon.png', width: 38,),
+                          Text('카카오 계정으로 로그인하기'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 277, height: 46,
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xff00BF18), // 배경색
+                          onPrimary: Color(0xffffffff), // 글자색
+                          shadowColor: Color(0xffC8C8C8), // 그림자색
+                          shape: RoundedRectangleBorder( // radius
+                              borderRadius: BorderRadius.circular(10)
+                          )
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('images/naver_icon.png', width: 38,),
+                          Text('네이버 계정으로 로그인하기'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 277, height: 46,
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xffffffff), // 배경색
+                          onPrimary: Color(0xff7E7E7E), // 글자색
+                          shadowColor: Color(0xffC8C8C8), // 그림자색
+                          shape: RoundedRectangleBorder( // radius
+                              borderRadius: BorderRadius.circular(10)
+                          )
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('images/google_icon.png', width: 38,),
+                          Text('구글 계정으로 로그인하기'),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: SizedBox(
-        width: 60,
-        height: 60,
-        child: FloatingActionButton( // 플로팅 버튼
-          onPressed: _incrementCounter,
-          tooltip: 'New',
-          child: SizedBox(
-            width: 60,
-            height: 60,
-            child : Icon(Icons.add,),
-          )
-        ),
-      ) // This trailing comma makes auto-formatting nicer for build methods.
+        floatingActionButton: SizedBox(
+          width: 60,
+          height: 60,
+          child: FloatingActionButton( // 플로팅 버튼
+              onPressed: (){},
+              tooltip: 'New',
+              child: SizedBox(
+                width: 60,
+                height: 60,
+                child : Icon(Icons.add,),
+              )
+          ),
+        ) // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
 
-class TextStyle extends StatelessWidget {
-  const TextStyle({super.key});
+
+class BtnStyle extends StatelessWidget {
+  const BtnStyle({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
 }
-
