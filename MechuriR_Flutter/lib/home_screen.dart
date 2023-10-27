@@ -28,19 +28,19 @@ class MyApp extends StatelessWidget {
             backgroundColor: Color(0xffD4C4AB) // 플로팅 버튼 배경색
         ),
       ),
-      home: const LoginPage(),);
+      home: const MainPage(),);
   }
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,  // 가운데 정렬
-          title: Image.asset('images/logo.png', height: 30,), // 로고 이미지
+          title: Image.asset('images/logo.png', height: 35,), // 로고 이미지
           actions: [
             IconButton(
                 onPressed: (){},
