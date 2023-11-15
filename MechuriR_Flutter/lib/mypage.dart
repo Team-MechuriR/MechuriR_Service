@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: 'MechuriR',  // AppName
+      debugShowCheckedModeBanner: false, // 앱 상단에 디버그 라벨 제거
       themeMode: ThemeMode.light,
       theme: ThemeData(
         brightness: Brightness.light, // LightMode
@@ -214,9 +215,11 @@ class MyPage extends StatelessWidget {
 }
 
 
+/*
 
-PickedFile _imageFile;
-final ImagePicker _picker = ImagePicker();
+// 카메라로 찍거나 갤러리에서 가져온 사진 컨트롤하기 위한 변수
+PickedFile _imageFile; // 카메라 갤러리에서 사진 가져올  때 사용함. (image_picker)
+final ImagePicker _picker = ImagePicker(); // 카메라/갤러리에서 사진 가져올 때 사용함 (image_picker)
 
 Widget imageProfile(){
   return Center(
@@ -245,6 +248,7 @@ Widget imageProfile(){
     ),
   )
 }
+ */
 
 
 

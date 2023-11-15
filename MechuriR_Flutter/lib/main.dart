@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: 'MechuriR',  // AppName
+      debugShowCheckedModeBanner: false, // 앱 상단에 디버그 라벨 제거
       themeMode: ThemeMode.light,
       theme: ThemeData(
         brightness: Brightness.light, // LightMode
