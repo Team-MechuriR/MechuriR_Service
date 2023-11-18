@@ -21,6 +21,7 @@
 		B12475DF2B05AF240005117A /* GoBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475DE2B05AF240005117A /* GoBackView.swift */; };
 		B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475E22B0895D40005117A /* MakeNewDiaryView.swift */; };
 		B12475E62B08C2CA0005117A /* dataStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475E52B08C2CA0005117A /* dataStructs.swift */; };
+		B12475ED2B0913380005117A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475EC2B0913380005117A /* EmptyView.swift */; };
 		B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */; };
 		B1A07A822AF5348300D5818F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A812AF5348300D5818F /* ContentView.swift */; };
 		B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A07A832AF5348800D5818F /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		B12475DE2B05AF240005117A /* GoBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBackView.swift; sourceTree = "<group>"; };
 		B12475E22B0895D40005117A /* MakeNewDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryView.swift; sourceTree = "<group>"; };
 		B12475E52B08C2CA0005117A /* dataStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructs.swift; sourceTree = "<group>"; };
+		B12475EC2B0913380005117A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechuriRiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechuriRiOSApp.swift; sourceTree = "<group>"; };
 		B1A07A812AF5348300D5818F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				B12475DA2B055BA90005117A /* ReceivedLetterView.swift */,
 				B12475DC2B055BE30005117A /* AlarmView.swift */,
 				B12475DE2B05AF240005117A /* GoBackView.swift */,
+				B12475EC2B0913380005117A /* EmptyView.swift */,
 				B12475E72B08CEC60005117A /* model */,
 				B12475E42B08C2750005117A /* data */,
 				B12475C12B05148C0005117A /* customs */,
@@ -229,6 +232,7 @@
 				B1A07A822AF5348300D5818F /* ContentView.swift in Sources */,
 				B12475C52B0519FD0005117A /* MainView.swift in Sources */,
 				B1A07A922AF5398800D5818F /* TabButton.swift in Sources */,
+				B12475ED2B0913380005117A /* EmptyView.swift in Sources */,
 				B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */,
 				B12475D52B0559D10005117A /* AddFriendsView.swift in Sources */,
 				B12475D72B055AFA0005117A /* ListOfFriendsView.swift in Sources */,

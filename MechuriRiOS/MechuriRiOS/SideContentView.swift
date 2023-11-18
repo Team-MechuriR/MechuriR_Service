@@ -7,22 +7,25 @@
 
 import SwiftUI
 
+// "마이페이지" "친구 목록" "친구 추가" "받은 편지" "보낸 편지" ""
+enum TabSelector: String, CaseIterable {
+    case main = "메인"
+    case myPage = "마이페이지"
+    case addFriend = "친구 추가"
+    case listFriend = "친구 목록"
+    case sendLetter = "보낸 편지"
+    case receivedLetter = "받은 편지"
+    case alarm = ""
+}
+
+
 struct SideContentView: View {
     @Binding var selectedTitle: String
     //네임스페이스 선언은 상위 뷰에 선언하고 가장 하위 뷰에 var namespace: Namespace.ID
     //궤적이 들어갈 뷰나 메소드에 namespace: namespace
     @Namespace var namespace
-    @State var selectedTab = 0
+    @Binding var selectedTab: TabSelector
     
-    private var tabs: [AnyView] = [
-        AnyView(NavigationView() { MainView() }),
-        AnyView(NavigationView() { MyPageView() }),
-        AnyView(NavigationView() { AddFriendsView() }),
-        AnyView(NavigationView() { ListOfFriendsView() }),
-        AnyView(NavigationView() { SendLetterView() }),
-        AnyView(NavigationView() { ReceivedLetterView() }),
-        AnyView(NavigationView() { AlarmView() })
-    ]
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.sideViewColor.ignoresSafeArea()
@@ -36,30 +39,43 @@ struct SideContentView: View {
                         .overlay(Circle().stroke(Color.btnColor, lineWidth: 2))
                         .frame(width: 60, height: 60)
                     
+                    Spacer()
+                    
                     Text("[이름]")
                         .font(.title3)
                         .fontWeight(.heavy)
                         .foregroundColor(.nameColor)
                     
-                    TabButton(image: "bell", title: "", selectedTitle: $selectedTitle, namespace: namespace)
+//                    TabButton(image: "bell", title: "", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    Spacer()
+                    
+                    Button {
+                        selectedTab = .alarm
+                    } label: {
+                        Image(systemName: "bell")
+                    }
+                    .foregroundStyle(Color.white)
+                    
+                    
                 }
-                .padding(.leading, 30)
+                .padding([.leading, .trailing], 30)
                 .padding(.top, 80)
                 //SideTabButton
                 VStack(spacing: 5) {
                     Divider()
                         .frame(width: 180, height: 5)
                         .background(Color.borderColor)
-                    TabButton(image: "person", title: "마이페이지", selectedTitle: $selectedTitle, namespace: namespace)
-                    TabButton(image: "person.3", title: "친구 목록",selectedTitle: $selectedTitle, namespace: namespace)
-                    TabButton(image: "person.badge.plus", title: "친구 추가", selectedTitle: $selectedTitle, namespace: namespace)
-                    TabButton(image: "envelope", title: "받은 편지", selectedTitle: $selectedTitle, namespace: namespace)
-                    TabButton(image: "paperplane", title: "보낸 편지", selectedTitle: $selectedTitle, namespace: namespace)
+                    TabButton(image: "home.fill", title: "메인", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "person", title: "마이페이지", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "person.3", title: "친구 목록",selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "person.badge.plus", title: "친구 추가", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "envelope", title: "받은 편지", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "paperplane", title: "보낸 편지", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
                     Divider()
                         .frame(width: 180, height: 5)
                         .background(Color.borderColor)
-                    TabButton(image: "info.circle", title: "개발자 알아보기", selectedTitle: $selectedTitle, namespace: namespace)
-                    TabButton(image: "square.and.arrow.up", title: "친구한테 공유하기", selectedTitle: $selectedTitle, namespace: namespace)
+//                    TabButton(image: "info.circle", title: "개발자 알아보기", selectedTitle: $selectedTitle, namespace: namespace)
+//                    TabButton(image: "square.and.arrow.up", title: "친구한테 공유하기", selectedTitle: $selectedTitle, namespace: namespace)
                     Divider()
                         .frame(width: 180, height: 5)
                         .background(Color.borderColor)
@@ -92,5 +108,5 @@ struct SideContentView: View {
 }
 
 #Preview {
-    SideContentView(selectedTitle: .constant("Main"))
+    SideContentView(selectedTitle: .constant("Main"),selectedTab: .constant(TabSelector.main))
 }

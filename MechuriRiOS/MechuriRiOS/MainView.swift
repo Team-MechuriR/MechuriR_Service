@@ -90,9 +90,13 @@ struct MainView: View { //메인뷰
                             .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
                             .padding()
                     }
-                    .sheet(isPresented: $showMakeNewDiaryView) {
+                    .fullScreenCover(isPresented: $showMakeNewDiaryView) {
                         MakeNewDiaryView()
                     }
+//                    .sheet(isPresented: $showMakeNewDiaryView) {
+//                        MakeNewDiaryView()
+//                            .presentationDetents([.medium])
+//                    }
                 }
             }
         }
