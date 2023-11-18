@@ -36,8 +36,48 @@ struct MainView: View { //메인뷰
                     .frame(width: deviceSize.width, height: 40)
                 )
                 
+                HStack{
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Image("sampleDiaryMainImage")
+                            .resizable()
+                            .frame(width: 175,height: 175)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        Text("일기장제목")
+                            .padding(.leading, 5)
+                        Text("🕚2023.09.22 ~ 09.30")
+                            .foregroundStyle(Color.gray)
+                    }
+                    .padding(5)
+                    .background(Rectangle()
+                        .fill(Color.btnColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    )
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Image("sampleDiaryMainImage")
+                            .resizable()
+                            .frame(width: 175,height: 175)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        Text("일기장제목")
+                            .padding(.leading, 5)
+                        Text("🕚2023.09.22")
+                            .foregroundStyle(Color.gray)
+                    }
+                    .padding(5)
+                    .background(Rectangle()
+                        .fill(Color.btnColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    )
+                    
+                    Spacer()
+                    
+                }
                 Spacer()
-                
                 HStack{
                     
                     Spacer()
@@ -64,10 +104,10 @@ struct makeNewDiaryView: View {
     private var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
-    @State private var diaryName: String = ""
+    @State private var diaryName: String = "".precomposedStringWithCanonicalMapping
     @State private var selectedDate = Date()
     @State private var selectedColor: Color = Color.teal
-    
+    @FocusState var focusField: Bool
     var body: some View {
         ZStack {
             
@@ -85,7 +125,7 @@ struct makeNewDiaryView: View {
                     }
                     Spacer()
                     
-                    Text("일기장 생성")
+                    Text("일기장 생성") // 최대 글자갯수 제한 필요
                         .font(.title3)
                         .foregroundStyle(Color.fontColor)
                         .bold()
@@ -110,14 +150,12 @@ struct makeNewDiaryView: View {
                 List {
                     
                     TextField("일기장 이름을 입력하세요.", text: $diaryName)
+                    
                         .padding(.leading, 10)
-                        
-                    
-                    
+                        .keyboardType(.default)
+        
                     DatePicker("날짜", selection: $selectedDate)
                         .padding(.leading, 10)
-                        .padding(.trailing, 10)
-                    
                     
                     HStack {
                         Image(systemName: "mappin.and.ellipse")
@@ -136,9 +174,6 @@ struct makeNewDiaryView: View {
                     HStack {
                         Image(systemName: "paintpalette")
                         ColorPicker("색상", selection: $selectedColor)
-                        
-                        Spacer()
-                        
                     }
                     .padding(.leading, 10)
                     
@@ -159,8 +194,8 @@ struct makeNewDiaryView: View {
                 .scrollContentBackground(.hidden) // 이게 있어야 리스트 백그라운드 컬러 수정 가능함
                 .background(Color.bgColor)
             }
-        }.background(Color.bgColor)
-        
+        }
+        .background(Color.bgColor)
     }
 }
 
