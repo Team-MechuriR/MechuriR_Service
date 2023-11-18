@@ -40,12 +40,6 @@ struct MainFrameView: View { //명칭 메인프레임뷰로 바꿀 예정
                         .offset(x: offsetX)
                         .ignoresSafeArea()
                 }
-                .overlay {
-                    if selectedTitle == "MyPage" {
-                        GoBackView()
-                    }
-                }
-            
             HStack {
                 
                 Spacer()

@@ -12,24 +12,38 @@ struct SideContentView: View {
     //네임스페이스 선언은 상위 뷰에 선언하고 가장 하위 뷰에 var namespace: Namespace.ID
     //궤적이 들어갈 뷰나 메소드에 namespace: namespace
     @Namespace var namespace
+    @State var selectedTab = 0
+    
+    private var tabs: [AnyView] = [
+        AnyView(NavigationView() { MainView() }),
+        AnyView(NavigationView() { MyPageView() }),
+        AnyView(NavigationView() { AddFriendsView() }),
+        AnyView(NavigationView() { ListOfFriendsView() }),
+        AnyView(NavigationView() { SendLetterView() }),
+        AnyView(NavigationView() { ReceivedLetterView() }),
+        AnyView(NavigationView() { AlarmView() })
+    ]
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.sideViewColor.ignoresSafeArea()
             VStack {
                 HStack {
-                    Spacer()
+                    
                     Image("sampleProfileImage")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.btnColor, lineWidth: 2))
                         .frame(width: 60, height: 60)
+                    
                     Text("[이름]")
-                        .font(.title)
+                        .font(.title3)
                         .fontWeight(.heavy)
                         .foregroundColor(.nameColor)
-                    Spacer()
+                    
                     TabButton(image: "bell", title: "", selectedTitle: $selectedTitle, namespace: namespace)
                 }
+                .padding(.leading, 30)
                 .padding(.top, 80)
                 //SideTabButton
                 VStack(spacing: 5) {
@@ -75,4 +89,8 @@ struct SideContentView: View {
         .frame(width: 240)
     }
     
+}
+
+#Preview {
+    SideContentView(selectedTitle: .constant("Main"))
 }

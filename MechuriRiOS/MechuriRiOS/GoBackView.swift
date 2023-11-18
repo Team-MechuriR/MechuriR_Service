@@ -11,6 +11,7 @@ struct GoBackView: View {
     private var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack{
             VStack{
@@ -18,7 +19,7 @@ struct GoBackView: View {
             }
             .overlay{
                 Button{
-                    
+                    presentationMode.wrappedValue.dismiss()
                 }label: {
                     Image(systemName: "xmark")
                         .fontWeight(.heavy)
@@ -27,6 +28,8 @@ struct GoBackView: View {
                 }
                 .offset(CGSize(width: -deviceSize.width / 2 + 25, height: -deviceSize.height/2 + 102))
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
 }

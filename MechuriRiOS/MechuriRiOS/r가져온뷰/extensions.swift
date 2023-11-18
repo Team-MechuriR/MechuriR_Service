@@ -27,3 +27,9 @@ extension View { // 빈 뷰를 터치했을 때 키보드가 내려가도록 하
         )
     }
 }
+
+extension View {
+    static var hidden: some View {
+        EmptyView()
+    }
+}

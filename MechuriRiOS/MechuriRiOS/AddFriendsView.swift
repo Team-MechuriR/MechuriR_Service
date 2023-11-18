@@ -14,14 +14,14 @@ struct AddFriendsView: View {
     var body: some View {
         ZStack {
             Color("bgColor").ignoresSafeArea()
-            
+                
             VStack{
                 Image("mechuri1")
                     .resizable()
                     .frame(width: 30,height: 30)
                 
                 HStack{
-                    
+
                     Spacer()
                     
                     Text("친구 추가")
@@ -39,7 +39,7 @@ struct AddFriendsView: View {
                 )
                 
                 Spacer() // 아예 위에 딱 붙이는 방법은 없나?
-                
+    
             }
         }
         .frame(width: getRect().width, alignment: .leading)

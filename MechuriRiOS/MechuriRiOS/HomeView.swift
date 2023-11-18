@@ -13,7 +13,8 @@ struct HomeView: View { //컨트롤뷰
     
     var body: some View {
         
-        TabView(selection: $selectedTitle) { //탭버튼시 돌아갈 곳
+        NavigationStack {
+            //TabView(selection: $selectedTitle) { //탭버튼시 돌아갈 곳
             MainView()
                 .tag("Main")
             MyPageView()
@@ -29,6 +30,7 @@ struct HomeView: View { //컨트롤뷰
             AlarmView()
                 .tag("")
         }
-        .frame(width: getRect().width)
+        //}
+        //.frame(width: getRect().width)
     }
 }

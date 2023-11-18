@@ -11,7 +11,10 @@ struct TabButton: View {
     
     var image: String
     var title: String
+    
     @Binding var selectedTitle: String
+    @Binding var selectedTab: Int
+    
     var namespace: Namespace.ID
     
     var body: some View {

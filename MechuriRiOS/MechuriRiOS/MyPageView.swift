@@ -12,6 +12,7 @@ struct MyPageView: View {
         return UIScreen.main.bounds
     }
     @State var changedName: String = ""
+    @State var output: String = "" // 임시
     var body: some View {
         ZStack {
             Color("bgColor").ignoresSafeArea()
@@ -69,8 +70,18 @@ struct MyPageView: View {
                         .onSubmit {
                             //validate(name: $changedName) -> 함수구현 필요
                         }
+                        
                     Spacer()
                 }
+                //예시
+//                .onChange(of: changedName) { (oldValue, newValue) in
+//                    Task {
+//                        let result = try! await
+//                        
+//                        output = result
+//                    }
+//                }
+                //예시
                 Divider()
                     .frame(width: deviceSize.width, height: 3)
                     .background(Color.btnColor)
