@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechuri_r/home_screen.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
@@ -71,7 +72,7 @@ class MyPage extends StatelessWidget {
                             ),
                             Text('마이페이지', style: TextStyle(color: Color(0xff403831), fontWeight: FontWeight.bold),),
                             IconButton(
-                              icon: Icon(Icons.done, color: Color(0xff403831),),
+                              icon: Icon(Icons.done, color: Color(0xff403831), size: 24,),
                               onPressed: (){
                                 Navigator.pop(context);
                               },
@@ -88,127 +89,7 @@ class MyPage extends StatelessWidget {
 
         ],
       ),
-      endDrawer: Container(
-        width: 250,
-        child: Drawer(
-          backgroundColor: Color(0xff595045),
-          child: ListView(
-            padding: EdgeInsets.zero, // 없으면 상단 부분 잘림
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 5),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: IconButton(
-                        icon: Icon(Icons.close, color: Colors.white,),
-                        onPressed: (){
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ), // X표시
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset('images/profile1.png', width: 45, height: 45,),
-                        Text('[이름]', style: TextStyle(color: Color(0xffF3E6C6)),),
-                        Text('님', style: TextStyle(color: Colors.white),),
-                        IconButton(
-                          icon: Icon(Icons.notifications, color: Colors.white),
-                          onPressed: (){},
-                        )
-                      ],
-
-                    ),
-                    Divider(
-                      thickness: 1,
-                      color: Color(0xffF3E6C6),
-                      height: 50,
-                    ),
-
-                    ListTile(
-                      leading: Icon(Icons.person, color: Colors.white,),
-                      title: Text('마이페이지', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.group, color: Colors.white,),
-                      title: Text('친구 목룍', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.person_add, color: Colors.white,),
-                      title: Text('친구 추가', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.mail, color: Colors.white,),
-                      title: Text('받은 편지', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.send, color: Colors.white,),
-                      title: Text('보낸 편지', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    Divider(
-                      thickness: 1,
-                      color: Color(0xffF3E6C6),
-                      height: 50,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.info_outline, color: Colors.white,),
-                      title: Text('개발자 알아보기', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.ios_share, color: Colors.white,),
-                      title: Text('친구한테 공유하기', style: TextStyle(color: Colors.white),),
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                    ),
-                    Divider(
-                      thickness: 1,
-                      color: Color(0xffF3E6C6),
-                      height: 50,
-                    ),
-                    Row(
-                      children: [
-                        TextButton(
-                            onPressed: (){},
-                            child: Image.asset('images/insta_logo.png')
-                        ),
-                        TextButton(
-                            onPressed: (){},
-                            child: Image.asset('images/facebook_logo.png')
-                        ),
-                        TextButton(
-                            onPressed: (){},
-                            child: Image.asset('images/youtube_logo.png')
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      endDrawer: MyDrawer()
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

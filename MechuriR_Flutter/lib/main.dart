@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mechuri_r/home_screen.dart';
-import 'package:mechuri_r/providers/counts.dart';
 
 void main() {
   runApp(const MyApp());
