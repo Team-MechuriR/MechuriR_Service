@@ -42,7 +42,7 @@ struct SideContentView: View {
                     Spacer()
                     
                     Text("[이름]")
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .fontWeight(.heavy)
                         .foregroundColor(.nameColor)
                     
@@ -53,6 +53,8 @@ struct SideContentView: View {
                         selectedTab = .alarm
                     } label: {
                         Image(systemName: "bell")
+                            .font(.title2)
+                            .fontWeight(.heavy)
                     }
                     .foregroundStyle(Color.white)
                     
@@ -65,7 +67,7 @@ struct SideContentView: View {
                     Divider()
                         .frame(width: 180, height: 5)
                         .background(Color.borderColor)
-                    TabButton(image: "home.fill", title: "메인", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
+                    TabButton(image: "house", title: "메인", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
                     TabButton(image: "person", title: "마이페이지", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
                     TabButton(image: "person.3", title: "친구 목록",selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)
                     TabButton(image: "person.badge.plus", title: "친구 추가", selectedTitle: $selectedTitle, selectedTab: $selectedTab, namespace: namespace)

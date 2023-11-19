@@ -37,7 +37,7 @@ struct SendLetterView: View {
                     Spacer()
                     
                     Text("보낸 편지")
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
                         .padding(7)

@@ -33,7 +33,7 @@ struct MakeNewDiaryView: View {
                     Spacer()
                     
                     Text("일기장 생성") // 최대 글자갯수 제한 필요
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
                         .padding(7)

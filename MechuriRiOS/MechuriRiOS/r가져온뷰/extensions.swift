@@ -33,3 +33,13 @@ extension View {
         EmptyView()
     }
 }
+
+
+extension Font {
+    //제목
+    static let Cafe24Air18: Font = .custom("Cafe24SsurroundAir", size: 18)
+    static let Cafe2418: Font = .custom("Cafe24Ssurround", size: 18)
+    
+    //본문
+    //
+}

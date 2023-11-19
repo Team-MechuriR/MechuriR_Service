@@ -25,7 +25,7 @@ struct AlarmView: View {
                     Spacer()
                     
                     Text("알림")
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
                         .padding(7)

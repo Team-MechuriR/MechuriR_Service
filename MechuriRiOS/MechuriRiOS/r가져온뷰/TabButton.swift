@@ -31,7 +31,9 @@ struct TabButton: View {
                 Image(systemName: image)
                     .frame(width: 10)
                     .font(.system(size: 22, weight: .regular))
+                    .padding(.trailing, 8)
                 Text(title)
+                    .font(.Cafe2418)
                     .fontWeight(.semibold)
             }
         }

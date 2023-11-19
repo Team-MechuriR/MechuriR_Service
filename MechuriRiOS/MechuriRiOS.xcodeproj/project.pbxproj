@@ -20,8 +20,15 @@
 		B12475DD2B055BE30005117A /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475DC2B055BE30005117A /* AlarmView.swift */; };
 		B12475DF2B05AF240005117A /* GoBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475DE2B05AF240005117A /* GoBackView.swift */; };
 		B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475E22B0895D40005117A /* MakeNewDiaryView.swift */; };
-		B12475E62B08C2CA0005117A /* dataStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475E52B08C2CA0005117A /* dataStructs.swift */; };
 		B12475ED2B0913380005117A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475EC2B0913380005117A /* EmptyView.swift */; };
+		B124764F2B0A6CCB0005117A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124764E2B0A6CCB0005117A /* NetworkManager.swift */; };
+		B12476512B0A6DAC0005117A /* ExDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476502B0A6DAC0005117A /* ExDiary.swift */; };
+		B12476542B0A6F520005117A /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476532B0A6F520005117A /* TeamMember.swift */; };
+		B12476562B0A6F5D0005117A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476552B0A6F5D0005117A /* Diary.swift */; };
+		B12476582B0A6F660005117A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476572B0A6F660005117A /* Comment.swift */; };
+		B124765A2B0A6F750005117A /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476592B0A6F750005117A /* Notice.swift */; };
+		B124765D2B0A7B4B0005117A /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */; };
+		B124765F2B0A7B640005117A /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */; };
 		B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */; };
 		B1A07A822AF5348300D5818F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A812AF5348300D5818F /* ContentView.swift */; };
 		B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A07A832AF5348800D5818F /* Assets.xcassets */; };
@@ -45,8 +52,16 @@
 		B12475DC2B055BE30005117A /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		B12475DE2B05AF240005117A /* GoBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBackView.swift; sourceTree = "<group>"; };
 		B12475E22B0895D40005117A /* MakeNewDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryView.swift; sourceTree = "<group>"; };
-		B12475E52B08C2CA0005117A /* dataStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructs.swift; sourceTree = "<group>"; };
 		B12475EC2B0913380005117A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B124764E2B0A6CCB0005117A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B12476502B0A6DAC0005117A /* ExDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDiary.swift; sourceTree = "<group>"; };
+		B12476532B0A6F520005117A /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
+		B12476552B0A6F5D0005117A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		B12476572B0A6F660005117A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B12476592B0A6F750005117A /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
+		B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
+		B12476602B0A7C400005117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechuriRiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechuriRiOSApp.swift; sourceTree = "<group>"; };
 		B1A07A812AF5348300D5818F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,7 +97,12 @@
 		B12475E42B08C2750005117A /* data */ = {
 			isa = PBXGroup;
 			children = (
-				B12475E52B08C2CA0005117A /* dataStructs.swift */,
+				B124764E2B0A6CCB0005117A /* NetworkManager.swift */,
+				B12476502B0A6DAC0005117A /* ExDiary.swift */,
+				B12476532B0A6F520005117A /* TeamMember.swift */,
+				B12476552B0A6F5D0005117A /* Diary.swift */,
+				B12476572B0A6F660005117A /* Comment.swift */,
+				B12476592B0A6F750005117A /* Notice.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -92,6 +112,37 @@
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B12476522B0A6E460005117A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1A07A812AF5348300D5818F /* ContentView.swift */,
+				B1A07A8D2AF534B900D5818F /* LoginView.swift */,
+				B12475BF2B050FD50005117A /* MainFrameView.swift */,
+				B12475C62B051AE00005117A /* SideContentView.swift */,
+				B12475D02B0558A70005117A /* HomeView.swift */,
+				B12475C42B0519FD0005117A /* MainView.swift */,
+				B12475E22B0895D40005117A /* MakeNewDiaryView.swift */,
+				B12475D22B05591C0005117A /* MyPageView.swift */,
+				B12475D42B0559D10005117A /* AddFriendsView.swift */,
+				B12475D62B055AFA0005117A /* ListOfFriendsView.swift */,
+				B12475D82B055B4C0005117A /* SendLetterView.swift */,
+				B12475DA2B055BA90005117A /* ReceivedLetterView.swift */,
+				B12475DC2B055BE30005117A /* AlarmView.swift */,
+				B12475DE2B05AF240005117A /* GoBackView.swift */,
+				B12475EC2B0913380005117A /* EmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B124765B2B0A7A780005117A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */,
+				B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		B1A07A732AF5348300D5818F = {
@@ -113,26 +164,14 @@
 		B1A07A7E2AF5348300D5818F /* MechuriRiOS */ = {
 			isa = PBXGroup;
 			children = (
+				B12476602B0A7C400005117A /* Info.plist */,
 				B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */,
-				B1A07A812AF5348300D5818F /* ContentView.swift */,
-				B1A07A8D2AF534B900D5818F /* LoginView.swift */,
-				B12475BF2B050FD50005117A /* MainFrameView.swift */,
-				B12475C62B051AE00005117A /* SideContentView.swift */,
-				B12475D02B0558A70005117A /* HomeView.swift */,
-				B12475C42B0519FD0005117A /* MainView.swift */,
-				B12475E22B0895D40005117A /* MakeNewDiaryView.swift */,
-				B12475D22B05591C0005117A /* MyPageView.swift */,
-				B12475D42B0559D10005117A /* AddFriendsView.swift */,
-				B12475D62B055AFA0005117A /* ListOfFriendsView.swift */,
-				B12475D82B055B4C0005117A /* SendLetterView.swift */,
-				B12475DA2B055BA90005117A /* ReceivedLetterView.swift */,
-				B12475DC2B055BE30005117A /* AlarmView.swift */,
-				B12475DE2B05AF240005117A /* GoBackView.swift */,
-				B12475EC2B0913380005117A /* EmptyView.swift */,
+				B12476522B0A6E460005117A /* Views */,
 				B12475E72B08CEC60005117A /* model */,
 				B12475E42B08C2750005117A /* data */,
 				B12475C12B05148C0005117A /* customs */,
 				B1A07A832AF5348800D5818F /* Assets.xcassets */,
+				B124765B2B0A7A780005117A /* fonts */,
 				B1A07A852AF5348800D5818F /* Preview Content */,
 			);
 			path = MechuriRiOS;
@@ -204,8 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B124765F2B0A7B640005117A /* Cafe24SsurroundAir.ttf in Resources */,
 				B1A07A872AF5348800D5818F /* Preview Assets.xcassets in Resources */,
 				B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */,
+				B124765D2B0A7B4B0005117A /* Cafe24Ssurround.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,20 +259,25 @@
 			files = (
 				B12475DB2B055BA90005117A /* ReceivedLetterView.swift in Sources */,
 				B1A07A8E2AF534B900D5818F /* LoginView.swift in Sources */,
+				B12476542B0A6F520005117A /* TeamMember.swift in Sources */,
+				B12476562B0A6F5D0005117A /* Diary.swift in Sources */,
 				B12475DD2B055BE30005117A /* AlarmView.swift in Sources */,
 				B1A07A942AF539BB00D5818F /* CustomCorners.swift in Sources */,
-				B12475E62B08C2CA0005117A /* dataStructs.swift in Sources */,
+				B124764F2B0A6CCB0005117A /* NetworkManager.swift in Sources */,
 				B12475C72B051AE00005117A /* SideContentView.swift in Sources */,
 				B12475D12B0558A70005117A /* HomeView.swift in Sources */,
 				B12475D92B055B4C0005117A /* SendLetterView.swift in Sources */,
+				B124765A2B0A6F750005117A /* Notice.swift in Sources */,
 				B12475C02B050FD50005117A /* MainFrameView.swift in Sources */,
 				B12475C32B05177F0005117A /* extensions.swift in Sources */,
 				B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */,
+				B12476512B0A6DAC0005117A /* ExDiary.swift in Sources */,
 				B12475DF2B05AF240005117A /* GoBackView.swift in Sources */,
 				B12475D32B05591C0005117A /* MyPageView.swift in Sources */,
 				B1A07A822AF5348300D5818F /* ContentView.swift in Sources */,
 				B12475C52B0519FD0005117A /* MainView.swift in Sources */,
 				B1A07A922AF5398800D5818F /* TabButton.swift in Sources */,
+				B12476582B0A6F660005117A /* Comment.swift in Sources */,
 				B12475ED2B0913380005117A /* EmptyView.swift in Sources */,
 				B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */,
 				B12475D52B0559D10005117A /* AddFriendsView.swift in Sources */,
@@ -372,6 +418,7 @@
 				DEVELOPMENT_TEAM = A8L5QZ969G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MechuriRiOS/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치를 기반으로 날씨 정보를 제공하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 어쩌구";
@@ -405,6 +452,7 @@
 				DEVELOPMENT_TEAM = A8L5QZ969G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MechuriRiOS/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치를 기반으로 날씨 정보를 제공하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 어쩌구";

@@ -1,5 +1,5 @@
 //
-//  ReceivedLetterView.swift
+//  ListOfFriendsView.swift
 //  MechuriRiOS
 //
 //  Created by 황민채 on 11/16/23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ReceivedLetterView: View {
-    private var deviceSize: CGRect {
+struct ListOfFriendsView: View {
+    public var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
     var body: some View {
@@ -24,8 +24,8 @@ struct ReceivedLetterView: View {
                     
                     Spacer()
                     
-                    Text("받은 편지")
-                        .font(.title3)
+                    Text("친구 목록")
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
                         .padding(7)
@@ -45,7 +45,6 @@ struct ReceivedLetterView: View {
         .frame(width: getRect().width, alignment: .leading)
     }
 }
-
 #Preview {
-    ReceivedLetterView()
+    ListOfFriendsView()
 }

@@ -25,7 +25,7 @@ struct MainView: View { //메인뷰
                 
                 HStack{
                     Text("[username] 의 일기장")
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
                         .padding(7)

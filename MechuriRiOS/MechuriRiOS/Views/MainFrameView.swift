@@ -22,9 +22,6 @@ struct MainFrameView: View { //명칭 메인프레임뷰로 바꿀 예정
     @State private var menuButtonImage: String = "line.3.horizontal"
     
     
-    //TabView를 사용하면(스크롤 미사용시) 보이지 않는 페이지버튼이 하단에 TabBar로 생성된다. 이것을 제거하는 초기화 코드
-    
-    
     var body: some View {
         
         ZStack {

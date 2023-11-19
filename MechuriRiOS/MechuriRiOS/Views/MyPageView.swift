@@ -35,9 +35,8 @@ struct MyPageView: View {
                     Spacer()
                     
                     Text("마이페이지")
-                        .font(.title3)
+                        .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
-                        .bold()
                         .padding(7)
                     
                     Spacer()
