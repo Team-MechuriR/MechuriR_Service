@@ -76,15 +76,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  #fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+     - family: cafe # fontFamily에 사용할 이름
+       fonts:
+         - asset: assets/fonts/Cafe24Ssurround-v2.0.ttf # 기본 폰트
+
+     - family: cafeair # fontFamily에 사용할 이름
+       fonts:
+         - asset: assets/fonts/Cafe24SsurroundAir-v1.1.ttf # 기본 폰트
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+     - family: pretendard
+       fonts:
+         - asset: assets/fonts/PretendardVariable.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

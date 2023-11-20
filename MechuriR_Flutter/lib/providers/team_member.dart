@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:mechuri_r/friend_list.dart';
+import 'package:mechuri_r/screen/friend_list.dart';
 import 'package:http/http.dart' as http;
 
 class TeamMember{
