@@ -83,6 +83,7 @@ class _LoginState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset('images/kakao_icon.png', width: 38,),
+                              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
                               Text('카카오 계정으로 로그인하기', style: TextStyle(fontSize: 16)),
                             ],
                           ),
@@ -105,6 +106,7 @@ class _LoginState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset('images/naver_icon.png', width: 25,),
+                              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
                               Text('네이버 계정으로 로그인하기', style: TextStyle(fontSize: 16)),
                             ],
                           ),
@@ -127,6 +129,7 @@ class _LoginState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset('images/google_icon.png', width: 38,),
+                              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
                               Text('구글 계정으로 로그인하기', style: TextStyle(fontSize: 16)),
                             ],
                           ),
