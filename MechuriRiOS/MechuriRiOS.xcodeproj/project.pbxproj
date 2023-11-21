@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10DE5EA2B0AFDFF00A30B5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */; };
+		B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */; };
 		B12475C02B050FD50005117A /* MainFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475BF2B050FD50005117A /* MainFrameView.swift */; };
 		B12475C32B05177F0005117A /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475C22B05177F0005117A /* extensions.swift */; };
 		B12475C52B0519FD0005117A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475C42B0519FD0005117A /* MainView.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryContentView.swift; sourceTree = "<group>"; };
 		B12475BF2B050FD50005117A /* MainFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFrameView.swift; sourceTree = "<group>"; };
 		B12475C22B05177F0005117A /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		B12475C42B0519FD0005117A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -97,7 +101,6 @@
 		B12475E42B08C2750005117A /* data */ = {
 			isa = PBXGroup;
 			children = (
-				B124764E2B0A6CCB0005117A /* NetworkManager.swift */,
 				B12476502B0A6DAC0005117A /* ExDiary.swift */,
 				B12476532B0A6F520005117A /* TeamMember.swift */,
 				B12476552B0A6F5D0005117A /* Diary.swift */,
@@ -110,6 +113,8 @@
 		B12475E72B08CEC60005117A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B124764E2B0A6CCB0005117A /* NetworkManager.swift */,
+				B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 				B12475D02B0558A70005117A /* HomeView.swift */,
 				B12475C42B0519FD0005117A /* MainView.swift */,
 				B12475E22B0895D40005117A /* MakeNewDiaryView.swift */,
+				B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */,
 				B12475D22B05591C0005117A /* MyPageView.swift */,
 				B12475D42B0559D10005117A /* AddFriendsView.swift */,
 				B12475D62B055AFA0005117A /* ListOfFriendsView.swift */,
@@ -270,11 +276,13 @@
 				B124765A2B0A6F750005117A /* Notice.swift in Sources */,
 				B12475C02B050FD50005117A /* MainFrameView.swift in Sources */,
 				B12475C32B05177F0005117A /* extensions.swift in Sources */,
+				B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */,
 				B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */,
 				B12476512B0A6DAC0005117A /* ExDiary.swift in Sources */,
 				B12475DF2B05AF240005117A /* GoBackView.swift in Sources */,
 				B12475D32B05591C0005117A /* MyPageView.swift in Sources */,
 				B1A07A822AF5348300D5818F /* ContentView.swift in Sources */,
+				B10DE5EA2B0AFDFF00A30B5F /* ContentViewModel.swift in Sources */,
 				B12475C52B0519FD0005117A /* MainView.swift in Sources */,
 				B1A07A922AF5398800D5818F /* TabButton.swift in Sources */,
 				B12476582B0A6F660005117A /* Comment.swift in Sources */,
