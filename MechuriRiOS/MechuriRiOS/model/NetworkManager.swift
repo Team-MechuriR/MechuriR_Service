@@ -67,7 +67,7 @@ final class NetworkManager {
             }
         }
     }
-    func requestTeamMember(completed: @escaping (GetTeamMember?, String?) -> ()) {
+    func requestTeamMember(completed: @escaping (TeamMember?, String?) -> ()) {
         
     }
     func requestDiary(completed: @escaping (GetDiary?, String?) -> ()) {
