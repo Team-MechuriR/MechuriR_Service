@@ -27,7 +27,7 @@ struct MakeNewDiaryContentView: View {
 	
 	let diaryType: DiaryType
 	
-	@Binding var isPresentNewContent: Bool
+//	@Binding var isPresentNewContent: Bool
 	
 	@State private var isPresentPopup: Bool = false
 	
@@ -51,7 +51,7 @@ struct MakeNewDiaryContentView: View {
                 HStack {
                     
                     Button{
-						isPresentNewContent.toggle()
+//						isPresentNewContent.toggle()
                     }label: {
                         Image(systemName: "xmark")
                             .fontWeight(.heavy)
@@ -227,5 +227,5 @@ struct NewContentDivider: View {
 }
 
 #Preview {
-	MakeNewDiaryContentView(diaryType: .letter, isPresentNewContent: .constant(true))
+	MakeNewDiaryContentView(diaryType: .letter)
 }

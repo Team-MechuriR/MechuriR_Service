@@ -13,14 +13,18 @@ struct DiaryDetailMenuView: View {
     var body: some View {
         VStack {
             ForEach(0..<4, id: \.self) { i in
-                Button {
-                    //MARK: 0 -> 일기 쓰기, 1 -> 멤버 목록, 2 -> 일기장 관리, 3 -> 일기장 삭제 // 해당 인덱스에 맞는 액션 구현
+                NavigationLink {
                     switch i {
-                    case 0:         print("일기 쓰기 엑션")
-                    case 1:         print("멤버 목록 엑션")
-                    case 2:         print("일기장 관리 엑션")
-                    case 3:         print("일기장 삭제 엑션")
-                    default:        print("이건 머?")
+                    case 0:
+                        MakeNewDiaryContentView(diaryType: .diary)
+                    case 1:
+                        MakeNewDiaryContentView(diaryType: .diary)
+                    case 2:
+                        MakeNewDiaryContentView(diaryType: .diary)
+                    case 3:
+                        MakeNewDiaryContentView(diaryType: .diary)
+                    default:
+                        MakeNewDiaryContentView(diaryType: .diary)
                     }
                 } label: {
                     Text("\(menuList[i])")
