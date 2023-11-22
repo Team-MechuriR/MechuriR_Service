@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct MakeNewDiaryView: View {
-    private var deviceSize: CGRect {
-        return UIScreen.main.bounds
-    }
     @State private var diaryName: String = "".precomposedStringWithCanonicalMapping
     @State private var selectedDate = Date()
     @State private var selectedColor: Color = Color.teal
     @FocusState var focusField: Bool
+    @Binding var isPresented: Bool
+    
     var body: some View {
         ZStack {
             
@@ -23,7 +22,7 @@ struct MakeNewDiaryView: View {
                 HStack {
                     
                     Button{
-                        
+                        isPresented.toggle()
                     }label: {
                         Image(systemName: "xmark")
                             .fontWeight(.heavy)
@@ -51,7 +50,7 @@ struct MakeNewDiaryView: View {
                 }
                 .background(Rectangle()
                     .fill(Color.btnColor)
-                    .frame(width: deviceSize.width, height: 40)
+                    .frame(height: 40)
                 )
                 
                 List {
@@ -108,5 +107,5 @@ struct MakeNewDiaryView: View {
 
 
 #Preview {
-    MakeNewDiaryView()
+    MakeNewDiaryView(isPresented: .constant(false))
 }

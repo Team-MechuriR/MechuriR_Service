@@ -8,102 +8,131 @@
  */
 import SwiftUI
 
-
 struct MainView: View { //메인뷰
-    private var deviceSize: CGRect {
-        return UIScreen.main.bounds
-    }
     @State private var showMakeNewDiaryView: Bool = false
+    private var columns = [GridItem(.flexible()), GridItem(.flexible())]
+    
+    var dataExample = [
+        ExDiary(exDiaryId: 1,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 2,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 3,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 4,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 5,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 6,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+    ]
+    
     var body: some View {
         ZStack {
-            Color("bgColor").ignoresSafeArea()
+            Color("bgColor")
+                .ignoresSafeArea()
             
             VStack{
-                Image("mechuri1")
-                    .resizable()
-                    .frame(width: 30,height: 30)
+                titleView
                 
-                HStack{
-                    Text("[username] 의 일기장")
-                        .font(.Cafe2418)
-                        .foregroundStyle(Color.fontColor)
-                        .bold()
-                        .padding(7)
-                    Spacer()
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(dataExample, id: \.self.exDiaryId) { diary in
+                            NavigationLink {
+                                //TODO: - 주영님 일기장뷰로 이동
+                                MainViewCell(diary: diary)
+                            } label: {
+                                MainViewCell(diary: diary)
+                                    .foregroundStyle(.black)
+                            }
+                        }
+                    }
                 }
-                .background(Rectangle()
-                    .fill(Color.btnColor)
-                    .frame(width: deviceSize.width, height: 40)
-                )
-                
-                HStack{
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Image("sampleDiaryMainImage")
-                            .resizable()
-                            .frame(width: 175,height: 175)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        Text("일기장제목")
-                            .padding(.leading, 5)
-                        Text("🕚2023.09.22 ~ 09.30")
-                            .foregroundStyle(Color.gray)
-                    }
-                    .padding(5)
-                    .background(Rectangle()
-                        .fill(Color.btnColor)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    )
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Image("sampleDiaryMainImage")
-                            .resizable()
-                            .frame(width: 175,height: 175)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        Text("일기장제목")
-                            .padding(.leading, 5)
-                        Text("🕚2023.09.22")
-                            .foregroundStyle(Color.gray)
-                    }
-                    .padding(5)
-                    .background(Rectangle()
-                        .fill(Color.btnColor)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    )
-                    
-                    Spacer()
-                    
-                }
-                Spacer()
-                HStack{
-                    
-                    Spacer()
-                    
-                    Button{
-                        showMakeNewDiaryView.toggle()
-                    }label: {
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundStyle(Color.btnColor)
-                            .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
-                            .padding()
-                    }
-                    .fullScreenCover(isPresented: $showMakeNewDiaryView) {
-                        MakeNewDiaryView()
-                    }
-//                    .sheet(isPresented: $showMakeNewDiaryView) {
-//                        MakeNewDiaryView()
-//                            .presentationDetents([.medium])
-//                    }
-                }
+                .padding(5)
             }
+            
+            floatingButton
         }
-        .frame(width: getRect().width, alignment: .leading)
     }
 }
 
+extension MainView {
+    private var titleView: some View {
+        VStack {
+            Image("mechuri1")
+                .resizable()
+                .frame(width: 30,height: 30)
+            
+            HStack{
+                Text("[username] 의 일기장")
+                    .font(.Cafe2418)
+                    .foregroundStyle(Color.fontColor)
+                    .bold()
+                    .padding(7)
+                Spacer()
+            }
+            .background(Rectangle()
+                .fill(Color.btnColor)
+                .frame(height: 40)
+            )
+        }
+    }
+    
+    private var floatingButton: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Button{
+                    showMakeNewDiaryView.toggle()
+                }label: {
+                    Image(systemName: "plus.circle.fill")
+                        .foregroundStyle(Color.btnColor)
+                        .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
+                        .padding()
+                }
+                .fullScreenCover(isPresented: $showMakeNewDiaryView) {
+                    MakeNewDiaryView(isPresented: $showMakeNewDiaryView)
+                }
+            }
+        }
+    }
+}
 
 #Preview {
     MainView()

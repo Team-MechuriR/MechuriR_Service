@@ -28,7 +28,7 @@ enum NetworkError {
     }
 }
 enum MyResult {
-    case success(data: GetExDiary)
+    case success(data: ExDiary)
     case failure(error: NetworkError)
 }
 
@@ -58,7 +58,7 @@ final class NetworkManager {
             }
             
             do {
-                let decodedResponse = try JSONDecoder().decode(GetExDiary.self, from: data)
+                let decodedResponse = try JSONDecoder().decode(ExDiary.self, from: data)
                 
                 completed(.success(data: decodedResponse)) // 여기에 태워보냄
                 

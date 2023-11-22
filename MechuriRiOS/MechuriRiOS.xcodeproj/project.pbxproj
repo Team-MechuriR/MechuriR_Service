@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C87D5562B0DD51D00C3F3EC /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87D5552B0DD51D00C3F3EC /* MainViewCell.swift */; };
 		B10DE5EA2B0AFDFF00A30B5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */; };
 		B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */; };
 		B12475C02B050FD50005117A /* MainFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475BF2B050FD50005117A /* MainFrameView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C87D5552B0DD51D00C3F3EC /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryContentView.swift; sourceTree = "<group>"; };
 		B12475BF2B050FD50005117A /* MainFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFrameView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				B12475C62B051AE00005117A /* SideContentView.swift */,
 				B12475D02B0558A70005117A /* HomeView.swift */,
 				B12475C42B0519FD0005117A /* MainView.swift */,
+				7C87D5552B0DD51D00C3F3EC /* MainViewCell.swift */,
 				B12475E22B0895D40005117A /* MakeNewDiaryView.swift */,
 				B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */,
 				B12475D22B05591C0005117A /* MyPageView.swift */,
@@ -268,6 +271,7 @@
 				B12476542B0A6F520005117A /* TeamMember.swift in Sources */,
 				B12476562B0A6F5D0005117A /* Diary.swift in Sources */,
 				B12475DD2B055BE30005117A /* AlarmView.swift in Sources */,
+				7C87D5562B0DD51D00C3F3EC /* MainViewCell.swift in Sources */,
 				B1A07A942AF539BB00D5818F /* CustomCorners.swift in Sources */,
 				B124764F2B0A6CCB0005117A /* NetworkManager.swift in Sources */,
 				B12475C72B051AE00005117A /* SideContentView.swift in Sources */,
