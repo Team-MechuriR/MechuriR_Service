@@ -66,7 +66,7 @@
 		73B44C952B0E379800B0A4FC /* DiaryDetailMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryDetailMenuView.swift; sourceTree = "<group>"; };
 		73B44C962B0E379800B0A4FC /* DiaryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryDetailCell.swift; sourceTree = "<group>"; };
 		73B44C9B2B0E37CC00B0A4FC /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		7C47A9CC2B0E46FB00D23510 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlert.swift; path = ../../../../../../Downloads/CustomAlert.swift; sourceTree = "<group>"; };
+		7C47A9CC2B0E46FB00D23510 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		7C47A9D52B0E486700D23510 /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		7C47A9D72B0E486B00D23510 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		7C47A9D92B0E486E00D23510 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
