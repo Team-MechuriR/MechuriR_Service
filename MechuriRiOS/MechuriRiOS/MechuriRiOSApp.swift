@@ -11,7 +11,7 @@ import SwiftUI
 struct MechuriRiOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(userData: UserData(url: nil, name: "", email: ""))
         }
     }
 }

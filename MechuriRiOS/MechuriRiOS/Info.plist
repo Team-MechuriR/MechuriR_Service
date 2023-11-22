@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>kakaologin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao178f4e1b9d68c29bb02c9ec498f42fde</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>googlelogin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.26658665343-ddp7r6kna0h1vqih0muq452ol5dhno00</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>26658665343-ddp7r6kna0h1vqih0muq452ol5dhno00.apps.googleusercontent.com</string>
+	<key>Item 0</key>
+	<string>Cafe24SsurroundAir-v1.1.ttf</string>
+	<key>Item 1</key>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Cafe24SsurroundAir.ttf</string>
+		<string>Cafe24Ssurround.ttf</string>
+	</array>
+</dict>
+</plist>

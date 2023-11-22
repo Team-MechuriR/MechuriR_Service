@@ -27,3 +27,19 @@ extension View { // 빈 뷰를 터치했을 때 키보드가 내려가도록 하
         )
     }
 }
+
+extension View {
+    static var hidden: some View {
+        EmptyView()
+    }
+}
+
+
+extension Font {
+    //제목
+    static let Cafe24Air18: Font = .custom("Cafe24SsurroundAir", size: 18)
+    static let Cafe2418: Font = .custom("Cafe24Ssurround", size: 18)
+    
+    //본문
+    //
+}
