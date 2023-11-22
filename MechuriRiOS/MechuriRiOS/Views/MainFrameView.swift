@@ -24,6 +24,8 @@ struct MainFrameView: View { //명칭 메인프레임뷰로 바꿀 예정
     
     var body: some View {
         
+        // MARK: - 임시로 NavigationStack추가
+        
         NavigationStack {
             ZStack {
                 Color("bgColor").ignoresSafeArea()

@@ -8,33 +8,58 @@
  */
 import SwiftUI
 
-struct DiaryExample: Identifiable {
-    var id = UUID().uuidString
-    var imageName: String
-    var title: String
-    var date: String
-}
-
 struct MainView: View { //메인뷰
     @State private var showMakeNewDiaryView: Bool = false
     private var columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var dataExample = [
-        DiaryExample(imageName: "sampleDiaryMainImage",
-                     title: "일기장 제목",
-                     date: "🕚2023.09.22 ~ 09.30"),
-        DiaryExample(imageName: "sampleDiaryMainImage",
-                     title: "일기장 제목",
-                     date: "🕚2023.09.22 ~ 09.30"),
-        DiaryExample(imageName: "sampleDiaryMainImage",
-                     title: "일기장 제목",
-                     date: "🕚2023.09.22 ~ 09.30"),
-        DiaryExample(imageName: "sampleDiaryMainImage",
-                     title: "일기장 제목",
-                     date: "🕚2023.09.22 ~ 09.30"),
-        DiaryExample(imageName: "sampleDiaryMainImage",
-                     title: "일기장 제목",
-                     date: "🕚2023.09.22 ~ 09.30")
+        ExDiary(exDiaryId: 1,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 2,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 3,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 4,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 5,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
+        
+        ExDiary(exDiaryId: 6,
+                createdDate: "2023.09.22",
+                modifiedDate: "",
+                startDate: "2023.09.22",
+                finishDate: "09.30",
+                exDiaryName: "일기장 제목",
+                createMemberName: "만채"),
     ]
     
     var body: some View {
@@ -47,9 +72,9 @@ struct MainView: View { //메인뷰
                 
                 ScrollView {
                     LazyVGrid(columns: columns) {
-                        ForEach(dataExample) { diary in
+                        ForEach(dataExample, id: \.self.exDiaryId) { diary in
                             NavigationLink {
-                                //상단에 NavigationStack 넣고 주영님 뷰로 이동
+                                //TODO: - 주영님 일기장뷰로 이동
                                 MainViewCell(diary: diary)
                             } label: {
                                 MainViewCell(diary: diary)
@@ -59,9 +84,9 @@ struct MainView: View { //메인뷰
                     }
                 }
                 .padding(5)
-                
-                floatingButton
             }
+            
+            floatingButton
         }
     }
 }
@@ -89,18 +114,21 @@ extension MainView {
     }
     
     private var floatingButton: some View {
-        HStack {
+        VStack {
             Spacer()
-            Button{
-                showMakeNewDiaryView.toggle()
-            }label: {
-                Image(systemName: "plus.circle.fill")
-                    .foregroundStyle(Color.btnColor)
-                    .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
-                    .padding()
-            }
-            .fullScreenCover(isPresented: $showMakeNewDiaryView) {
-                MakeNewDiaryView(isPresented: $showMakeNewDiaryView)
+            HStack {
+                Spacer()
+                Button{
+                    showMakeNewDiaryView.toggle()
+                }label: {
+                    Image(systemName: "plus.circle.fill")
+                        .foregroundStyle(Color.btnColor)
+                        .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
+                        .padding()
+                }
+                .fullScreenCover(isPresented: $showMakeNewDiaryView) {
+                    MakeNewDiaryView(isPresented: $showMakeNewDiaryView)
+                }
             }
         }
     }

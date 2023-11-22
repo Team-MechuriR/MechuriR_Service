@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct MakeNewDiaryView: View {
-    private var deviceSize: CGRect {
-        return UIScreen.main.bounds
-    }
     @State private var diaryName: String = "".precomposedStringWithCanonicalMapping
     @State private var selectedDate = Date()
     @State private var selectedColor: Color = Color.teal
@@ -53,7 +50,7 @@ struct MakeNewDiaryView: View {
                 }
                 .background(Rectangle()
                     .fill(Color.btnColor)
-                    .frame(width: deviceSize.width, height: 40)
+                    .frame(height: 40)
                 )
                 
                 List {

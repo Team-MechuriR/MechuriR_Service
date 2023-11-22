@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct MainViewCell: View {
-    var diary: DiaryExample
+    var diary: ExDiary
     
     var body: some View {
         VStack {
-            Image(diary.imageName)
+            // MARK: - imageData 오면 넣기
+            Image("sampleDiaryMainImage")
                 .resizable()
                 .frame(width: 170, height: 170)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-            Text(diary.title)
+            Text(diary.exDiaryName)
                 .padding(.leading, 5)
-            Text(diary.date)
+            Text("🕚\(diary.startDate) ~ \(diary.finishDate)")
                 .foregroundStyle(Color.gray)
         }
         .padding(5)
@@ -31,8 +32,12 @@ struct MainViewCell: View {
 
 #Preview {
     MainViewCell(
-        diary: DiaryExample(imageName: "sampleDiaryMainImage",
-                            title: "일기장제목",
-                            date: "🕚2023.09.22 ~ 09.30")
+        diary: ExDiary(exDiaryId: 1,
+                       createdDate: "2023.09.22",
+                       modifiedDate: "",
+                       startDate: "2023.09.22",
+                       finishDate: "09.30",
+                       exDiaryName: "일기장 제목",
+                       createMemberName: "만채")
     )
 }
