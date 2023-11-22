@@ -30,12 +30,12 @@ struct MainView: View { //메인뷰
                 createMemberName: "만채"),
         
         ExDiary(exDiaryId: 3,
-                createdDate: "2023.09.22",
+                createdDate: "2023.12.25",
                 modifiedDate: "",
-                startDate: "2023.09.22",
-                finishDate: "09.30",
-                exDiaryName: "일기장 제목",
-                createMemberName: "만채"),
+                startDate: "22023.12.25",
+                finishDate: "12.25",
+                exDiaryName: "뷰 그리기",
+                createMemberName: "덕훈 센세"),
         
         ExDiary(exDiaryId: 4,
                 createdDate: "2023.09.22",
@@ -73,9 +73,9 @@ struct MainView: View { //메인뷰
                 ScrollView {
                     LazyVGrid(columns: columns) {
                         ForEach(dataExample, id: \.self.exDiaryId) { diary in
+                           
                             NavigationLink {
-                                //TODO: - 주영님 일기장뷰로 이동
-                                MainViewCell(diary: diary)
+                                DiaryDetailView(data: diary)
                             } label: {
                                 MainViewCell(diary: diary)
                                     .foregroundStyle(.black)
