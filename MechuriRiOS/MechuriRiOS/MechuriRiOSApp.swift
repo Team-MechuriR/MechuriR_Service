@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MechuriRiOSApp: App {
+    
     var body: some Scene {
         WindowGroup {
             //TODO: - Login 연결
