@@ -15,6 +15,8 @@ struct MakeNewDiaryView: View {
     @State private var selectedDate = Date()
     @State private var selectedColor: Color = Color.teal
     @FocusState var focusField: Bool
+    @Binding var isPresented: Bool
+    
     var body: some View {
         ZStack {
             
@@ -23,7 +25,7 @@ struct MakeNewDiaryView: View {
                 HStack {
                     
                     Button{
-                        
+                        isPresented.toggle()
                     }label: {
                         Image(systemName: "xmark")
                             .fontWeight(.heavy)
@@ -108,5 +110,5 @@ struct MakeNewDiaryView: View {
 
 
 #Preview {
-    MakeNewDiaryView()
+    MakeNewDiaryView(isPresented: .constant(false))
 }
