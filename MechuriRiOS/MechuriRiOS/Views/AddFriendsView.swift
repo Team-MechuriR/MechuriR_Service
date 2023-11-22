@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//(민채)
+//MARK: 친구추가뷰
+
 struct AddFriendsView: View {
     private var deviceSize: CGRect {
         return UIScreen.main.bounds

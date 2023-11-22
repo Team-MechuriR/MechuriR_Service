@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//(민채)
+//MARK: 친구목록뷰
+
 struct ListOfFriendsView: View {
     public var deviceSize: CGRect {
         return UIScreen.main.bounds
@@ -16,7 +19,7 @@ struct ListOfFriendsView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1")
+                Image("mechuri1") //로고 이미지
                     .resizable()
                     .frame(width: 30,height: 30)
                 
@@ -38,9 +41,10 @@ struct ListOfFriendsView: View {
                     .frame(width: deviceSize.width, height: 40)
                 )
                 
-                Spacer() // 아예 위에 딱 붙이는 방법은 없나?
                 
-            }
+                
+            } //상단 탭바
+            
         }
         .frame(width: getRect().width, alignment: .leading)
     }

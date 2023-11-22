@@ -32,6 +32,7 @@
 		B124765A2B0A6F750005117A /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12476592B0A6F750005117A /* Notice.swift */; };
 		B124765D2B0A7B4B0005117A /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */; };
 		B124765F2B0A7B640005117A /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */; };
+		B12B69CF2B0DF78300611515 /* ListOfMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */; };
 		B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */; };
 		B1A07A822AF5348300D5818F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A812AF5348300D5818F /* ContentView.swift */; };
 		B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A07A832AF5348800D5818F /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 		B12476602B0A7C400005117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMembersView.swift; sourceTree = "<group>"; };
 		B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechuriRiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechuriRiOSApp.swift; sourceTree = "<group>"; };
 		B1A07A812AF5348300D5818F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B12475D22B05591C0005117A /* MyPageView.swift */,
 				B12475D42B0559D10005117A /* AddFriendsView.swift */,
 				B12475D62B055AFA0005117A /* ListOfFriendsView.swift */,
+				B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */,
 				B12475D82B055B4C0005117A /* SendLetterView.swift */,
 				B12475DA2B055BA90005117A /* ReceivedLetterView.swift */,
 				B12475DC2B055BE30005117A /* AlarmView.swift */,
@@ -284,6 +287,7 @@
 				B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */,
 				B12476512B0A6DAC0005117A /* ExDiary.swift in Sources */,
 				B12475DF2B05AF240005117A /* GoBackView.swift in Sources */,
+				B12B69CF2B0DF78300611515 /* ListOfMembersView.swift in Sources */,
 				B12475D32B05591C0005117A /* MyPageView.swift in Sources */,
 				B1A07A822AF5348300D5818F /* ContentView.swift in Sources */,
 				B10DE5EA2B0AFDFF00A30B5F /* ContentViewModel.swift in Sources */,
