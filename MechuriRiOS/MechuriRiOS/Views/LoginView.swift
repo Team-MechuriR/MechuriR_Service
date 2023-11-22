@@ -6,107 +6,71 @@
 //
 
 import SwiftUI
-import GoogleSignIn
 
 struct LoginView: View {
-    
-    @StateObject var kakaoAuthVM: KaKaoAuthVM = KaKaoAuthVM()
-    @State private var isLoggedIn: Bool = false
-    
-    // 임시 구글 로그인 상태
-    @State private var isLogined: Bool = false
-    // 임시 구글 유저 데이터
-    @State private var userData: UserData
-    // 임시 구글 팝업용
-    @State private var isAlert = true
-    
-    public init(isLogined: Bool = false, userData: UserData) {
-        _isLogined = State(initialValue: isLogined)
-        _userData = State(initialValue: userData)
-    }
-    
+    @State private var id = ""
+    @State private var password = ""
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color(.bg)
-                    .ignoresSafeArea(.all)
-                
-                VStack(spacing: 20) {
-                    
-                    Image("mechuri1")
-                        .resizable()
-                        .frame(width: 270, height: 270)
-                    
-                    // 카카오
-                    Button {
-                        kakaoAuthVM.handleKakaoLogin()
-                    } label: {
-                        Image("kakao_login")
-                            .resizable()
-                            .frame(width: 277, height: 46)
-                    }
-                    
-                    // 구글
-                    Button {
-                        googleLogin()
-                    } label: {
-                        Image("google_login")
-                            .resizable()
-                            .frame(width: 277, height: 46)
-                    }
-                    
-                }
-                .navigationDestination(isPresented: $isLogined, destination: {
-                    NextPageView(userData: $userData)
+        ZStack{
+            Color("bgColor").ignoresSafeArea()
+            VStack{
+                Image("mechuri1")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                Button(action: btnpress, label: {
+                    Text("카카오")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
+                        .frame(width: 277, height: 46)
                 })
-                .onAppear {
-                    // 구글 로그인 상태 체크
-                    checkState()
+                .background()
+                Button(action: btnpress, label: {
+                    Text("네이버")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
+                        .frame(width: 277, height: 46)
+                })
+                .background()
+                Button(action: btnpress, label: {
+                    Text("구글")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
+                        .frame(width: 277, height: 46)
+                })
+                .background()
+                TextField("ID", text: $id)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 277, height: 46)
+                TextField("PASSWORD", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 277, height: 46)
+                Button(action: btnpress, label: {
+                    Text("로그인")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
+                        .frame(width: 277, height: 46)
+                })
+                .background()
+                HStack{
+                    Text("아이디 찾기")
+                    Text("|")
+                    Text("비밀번호 찾기")
+                    Text("|")
+                    Text("회원가입")
                 }
-                .alert(LocalizedStringKey("로그인 실패"), isPresented: $isAlert) {
-                    Text("확인")
-                } message: {
-                    Text("다시 시도해주세요")
-                }
             }
         }
+        
     }
-    
-    // 구글 상태 체크
-    func checkState() {
-        GIDSignIn.sharedInstance.restorePreviousSignIn { [self] user, error in
-            if error != nil || user == nil {
-                // 로그아웃 상태
-                print("구글 로그아웃 상태")
-            } else {
-                // 로그인 상태
-                guard let profile = user?.profile else { return }
-                let data = UserData(url: profile.imageURL(withDimension: 180), name: profile.name, email: profile.email)
-                userData = data
-                isLogined = true
-                print(isLogined)
-            }
-        }
-    }
-    // 구글 로그인
-    func googleLogin() {
-        // rootViewController
-        guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else { return }
-        // 로그인 진행
-        GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
-            guard let result = signInResult else {
-                isAlert = true
-                return
-            }
-            
-            guard let profile = result.user.profile else { return }
-            let data = UserData(url: profile.imageURL(withDimension: 180), name: profile.name, email: profile.email)
-            self.userData = data
-            self.isLogined = true
-        }
+    func btnpress(){
     }
 }
 
+
 #Preview {
-    LoginView(userData: UserData(url: nil, name: "", email: ""))
+    LoginView()
 }
