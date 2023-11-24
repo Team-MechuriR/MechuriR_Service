@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 구글관련 임시 뷰 유저데이터 받아오는 userdata 나중에 지워도 됨.
 struct UserData {
     let url: URL?
     let name: String

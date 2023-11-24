@@ -31,7 +31,6 @@
 		B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */; };
 		B12475C02B050FD50005117A /* MainFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475BF2B050FD50005117A /* MainFrameView.swift */; };
 		B12475C72B051AE00005117A /* SideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475C62B051AE00005117A /* SideContentView.swift */; };
-		B12475D12B0558A70005117A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475D02B0558A70005117A /* HomeView.swift */; };
 		B12475D32B05591C0005117A /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475D22B05591C0005117A /* MyPageView.swift */; };
 		B12475D52B0559D10005117A /* AddFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475D42B0559D10005117A /* AddFriendsView.swift */; };
 		B12475D72B055AFA0005117A /* ListOfFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475D62B055AFA0005117A /* ListOfFriendsView.swift */; };
@@ -76,7 +75,6 @@
 		B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryContentView.swift; sourceTree = "<group>"; };
 		B12475BF2B050FD50005117A /* MainFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFrameView.swift; sourceTree = "<group>"; };
 		B12475C62B051AE00005117A /* SideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideContentView.swift; sourceTree = "<group>"; };
-		B12475D02B0558A70005117A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B12475D22B05591C0005117A /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		B12475D42B0559D10005117A /* AddFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsView.swift; sourceTree = "<group>"; };
 		B12475D62B055AFA0005117A /* ListOfFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFriendsView.swift; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 		B12475E42B08C2750005117A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				63D86F252B0E3EEE00A28DEA /* UserData.swift */,
 				B12476502B0A6DAC0005117A /* ExDiary.swift */,
 				B12476532B0A6F520005117A /* TeamMember.swift */,
 				B12476552B0A6F5D0005117A /* Diary.swift */,
@@ -147,6 +146,7 @@
 		B12475E72B08CEC60005117A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				63D86F282B0E3EF400A28DEA /* KaKaoAuthVM.swift */,
 				B124764E2B0A6CCB0005117A /* NetworkManager.swift */,
 				B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */,
 			);
@@ -160,7 +160,6 @@
 				B1A07A8D2AF534B900D5818F /* LoginView.swift */,
 				B12475BF2B050FD50005117A /* MainFrameView.swift */,
 				B12475C62B051AE00005117A /* SideContentView.swift */,
-				B12475D02B0558A70005117A /* HomeView.swift */,
 				73B44C962B0E379800B0A4FC /* DiaryDetailCell.swift */,
 				73B44C952B0E379800B0A4FC /* DiaryDetailMenuView.swift */,
 				73B44C942B0E379800B0A4FC /* DiaryDetailView.swift */,
@@ -214,9 +213,7 @@
 				63062B2E2B0EF26900B3B3A1 /* Config.xcconfig */,
 				B12476602B0A7C400005117A /* Info.plist */,
 				B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */,
-				63D86F282B0E3EF400A28DEA /* KaKaoAuthVM.swift */,
 				63D86F242B0E3EEE00A28DEA /* NextPageView.swift */,
-				63D86F252B0E3EEE00A28DEA /* UserData.swift */,
 				B12476522B0A6E460005117A /* Views */,
 				B12475E72B08CEC60005117A /* model */,
 				B12475E42B08C2750005117A /* data */,
@@ -335,7 +332,6 @@
 				B124764F2B0A6CCB0005117A /* NetworkManager.swift in Sources */,
 				7C47A9D82B0E486B00D23510 /* extensions.swift in Sources */,
 				B12475C72B051AE00005117A /* SideContentView.swift in Sources */,
-				B12475D12B0558A70005117A /* HomeView.swift in Sources */,
 				B12475D92B055B4C0005117A /* SendLetterView.swift in Sources */,
 				B124765A2B0A6F750005117A /* Notice.swift in Sources */,
 				B12475C02B050FD50005117A /* MainFrameView.swift in Sources */,

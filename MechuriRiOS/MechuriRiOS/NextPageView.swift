@@ -5,7 +5,7 @@
 //  Created by 강치우 on 11/22/23.
 //
 
-// 임시로 다음 로그인 화면 만든 뷰임.
+// 임시로 다음 로그인 화면 만든 뷰임. 나중에 삭제 요망.
 
 import SwiftUI
 import GoogleSignIn
