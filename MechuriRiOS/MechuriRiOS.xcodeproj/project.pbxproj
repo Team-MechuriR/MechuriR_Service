@@ -58,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63062B2E2B0EF26900B3B3A1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		63D86F102B0E3E5900A28DEA /* kakaoinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kakaoinfo.plist; sourceTree = "<group>"; };
 		63D86F242B0E3EEE00A28DEA /* NextPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
 		63D86F252B0E3EEE00A28DEA /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				63D86F102B0E3E5900A28DEA /* kakaoinfo.plist */,
+				63062B2E2B0EF26900B3B3A1 /* Config.xcconfig */,
 				B12476602B0A7C400005117A /* Info.plist */,
 				B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */,
 				63D86F282B0E3EF400A28DEA /* KaKaoAuthVM.swift */,
