@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping("/signup")
     public ResponseEntity<Void> registerUser(UserSignupReqDto dto) {
     	System.out.println("UserController - registerUser");
-    	int result = userService.registerUser(dto);
+    	userService.registerUser(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
     }
