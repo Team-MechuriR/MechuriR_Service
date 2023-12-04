@@ -30,9 +30,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http:
+  flutter_secure_storage : ^5.0.2 # flutter_secure_storage 관련 패키지
+  dio: ^5.4.0  # http 통신을 위한 패키지
+  provider: ^6.0.0
   flutter_svg: ^1.1.6
   image_picker: ^0.8.7
+
+  # 카카오 로그인
+  kakao_flutter_sdk: ^1.7.0 # 전체 추가
+  kakao_flutter_sdk_auth: ^1.7.0 # 사용자 인증 및 토큰 관리 패키지
+  kakao_flutter_sdk_user: ^1.7.0  # 카카오 로그인
+  kakao_flutter_sdk_talk: ^1.7.0  # 카카오톡 메시지, 카카오톡 소셜(프로필 가져오기, 친구 목록 가져오기)
+  kakao_flutter_sdk_share: ^1.7.0 # 카카오톡 공유
+  kakao_flutter_sdk_navi: ^1.7.0  # 카카오내비
+  kakao_flutter_sdk_friend: ^1.7.0  # 카카오톡 소셜 (피커 : 친구 선택하기)
 
 
   # The following adds the Cupertino Icons font to your application.

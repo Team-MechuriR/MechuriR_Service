@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart'; //  DIO 패키지로 HTTP 통신
+import 'dart:convert';  // JSON Encode, Decode를 위한 패키지
+import 'package:flutter_secure_storage/flutter_secure_storage.dart'; // flutter_secure_storage 패키지
+import 'package:mechuri_r/data/LogIn.dart';
+
 
 void main() {
   runApp(const MyApp());
