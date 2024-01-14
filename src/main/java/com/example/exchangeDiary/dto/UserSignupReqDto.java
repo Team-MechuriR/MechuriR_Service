@@ -1,7 +1,7 @@
 package com.example.exchangeDiary.dto;
 
 public class UserSignupReqDto {
-  private String userId;
+	private String userId;
 	private String userPw;
 	private String userName;
 	private String userBirth;

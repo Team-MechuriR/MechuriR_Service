@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.exchangeDiary.dto.*;
+import com.example.exchangeDiary.service.UserService;
 import com.example.exchangeDiary.serviceImpl.UserServiceImpl;
 
 import lombok.RequiredArgsConstructor;
@@ -34,9 +35,9 @@ public class UserController {
 
     // 회원 가입
     @PostMapping("/signup")
-    public ResponseEntity<Void> registerUser(UserSignupReqDto dto) {
+    public ResponseEntity<Void> registerUser(@RequestBody UserSignupReqDto dto) {
     	System.out.println("UserController - registerUser");
-    	userService.registerUser(dto);
+    	int result = userService.registerUser(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
     }

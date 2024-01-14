@@ -3,17 +3,19 @@ package com.example.exchangeDiary.serviceImpl;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.exchangeDiary.dao.UserDao;
 import com.example.exchangeDiary.dto.UserInfoDto;
 import com.example.exchangeDiary.dto.UserSignupReqDto;
 import com.example.exchangeDiary.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService {
 	
-	@Inject
-	UserDao userDao;
+	@Autowired
+	private UserDao userDao;
 	
 	@Override
 	public UserInfoDto loginCheck(UserInfoDto dto, HttpSession session) {
