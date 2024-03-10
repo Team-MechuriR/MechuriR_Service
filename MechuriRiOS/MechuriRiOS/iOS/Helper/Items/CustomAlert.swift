@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomAlert: View{
 	@Binding var isPresentPopup: Bool
+    
 	var body:some View{
 		VStack {
 			Text("6개월 후에 편지를 보내드릴게요:>")

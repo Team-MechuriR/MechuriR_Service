@@ -72,7 +72,7 @@ struct MainFrameView: View {
                             .tint(.blue)
                             .padding(.top, 50)
                             .padding(.trailing, 20)
-                            .offset(x: buttonOffsetX + 10, y: -5) // 버튼 위치
+                            .offset(x: buttonOffsetX + 10, y: -45) // 버튼 위치
                             
                             Spacer()
                             

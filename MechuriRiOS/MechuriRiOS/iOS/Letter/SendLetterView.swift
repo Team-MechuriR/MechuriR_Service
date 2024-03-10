@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+
 struct SendLetterAndState: Identifiable {
     var id = UUID()
     var letter: String
     var state: String
     var stateColor: Color // 여기에 편지 제목하고 내용 분리하여 구성------
 }
+
 struct SendLetterView: View {
     private var deviceSize: CGRect {
         return UIScreen.main.bounds
@@ -22,7 +24,9 @@ struct SendLetterView: View {
         SendLetterAndState(letter: "언제 다 할라나", state: "전달대기", stateColor: Color.btnColor),
         SendLetterAndState(letter: "후우우우우", state: "전달완료", stateColor: Color.fontColor)
     ]
+    
     @State private var stateColor: Color = Color.btnColor
+    
     var body: some View {
         ZStack {
             Color("bgColor").ignoresSafeArea()
@@ -49,12 +53,12 @@ struct SendLetterView: View {
                     .fill(Color.btnColor)
                     .frame(width: deviceSize.width, height: 40)
                 )
-                NavigationStack{
+                NavigationStack {
                     
                     List {
                         
                         ForEach(sendLetterItems) { item in
-                            NavigationLink(destination: DetailsView(message: item.letter)) {
+                            NavigationLink(destination: sendLetterDetailView(message: item.letter)) {
                                 HStack {
                                     Image(systemName: "envelope")
                                     Text(item.letter)
@@ -76,7 +80,7 @@ struct SendLetterView: View {
     }
 }
 
-struct DetailsView: View {
+struct sendLetterDetailView: View {
     let message: String
     
     var body: some View {

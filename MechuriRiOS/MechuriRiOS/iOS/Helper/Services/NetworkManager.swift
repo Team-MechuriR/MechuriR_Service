@@ -76,8 +76,5 @@ final class NetworkManager {
     func requestComment(completed: @escaping (GetComment?, String?) -> ()) {
         
     }
-    func requestSingleNotice(completed: @escaping (GetSingleNotice?, String?) -> ()) {
-        
-    }
     
 }

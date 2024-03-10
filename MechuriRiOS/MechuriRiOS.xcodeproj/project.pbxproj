@@ -23,7 +23,6 @@
 		7C47A9DA2B0E486E00D23510 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C47A9D92B0E486E00D23510 /* TabButton.swift */; };
 		7C87D5562B0DD51D00C3F3EC /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87D5552B0DD51D00C3F3EC /* MainViewCell.swift */; };
 		B10DE5EA2B0AFDFF00A30B5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */; };
-		B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */; };
 		B12475C02B050FD50005117A /* MainFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475BF2B050FD50005117A /* MainFrameView.swift */; };
 		B12475C72B051AE00005117A /* SideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475C62B051AE00005117A /* SideContentView.swift */; };
 		B12475D32B05591C0005117A /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12475D22B05591C0005117A /* MyPageView.swift */; };
@@ -44,6 +43,13 @@
 		B124765D2B0A7B4B0005117A /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765C2B0A7B4B0005117A /* Cafe24Ssurround.ttf */; };
 		B124765F2B0A7B640005117A /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */; };
 		B12B69CF2B0DF78300611515 /* ListOfMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */; };
+		B1760DEC2B9D619C00D4C88A /* WriteLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DEB2B9D619C00D4C88A /* WriteLetterView.swift */; };
+		B1760DEE2B9D61A900D4C88A /* WriteDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DED2B9D61A900D4C88A /* WriteDiaryView.swift */; };
+		B1760DF02B9D651C00D4C88A /* ModalBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DEF2B9D651C00D4C88A /* ModalBackground.swift */; };
+		B1760DF22B9D6A5B00D4C88A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DF12B9D6A5B00D4C88A /* Enums.swift */; };
+		B1760DF42B9D6A8A00D4C88A /* Dividers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DF32B9D6A8A00D4C88A /* Dividers.swift */; };
+		B1760DF72B9D919900D4C88A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1760DF62B9D919900D4C88A /* Alamofire */; };
+		B1760DF92B9D919900D4C88A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B1760DF82B9D919900D4C88A /* AlamofireDynamic */; };
 		B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */; };
 		B1A07A822AF5348300D5818F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A812AF5348300D5818F /* ContentView.swift */; };
 		B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A07A832AF5348800D5818F /* Assets.xcassets */; };
@@ -66,7 +72,6 @@
 		7C47A9D92B0E486E00D23510 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		7C87D5552B0DD51D00C3F3EC /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewDiaryContentView.swift; sourceTree = "<group>"; };
 		B12475BF2B050FD50005117A /* MainFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFrameView.swift; sourceTree = "<group>"; };
 		B12475C62B051AE00005117A /* SideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideContentView.swift; sourceTree = "<group>"; };
 		B12475D22B05591C0005117A /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
@@ -88,6 +93,11 @@
 		B124765E2B0A7B640005117A /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 		B12476602B0A7C400005117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMembersView.swift; sourceTree = "<group>"; };
+		B1760DEB2B9D619C00D4C88A /* WriteLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLetterView.swift; sourceTree = "<group>"; };
+		B1760DED2B9D61A900D4C88A /* WriteDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryView.swift; sourceTree = "<group>"; };
+		B1760DEF2B9D651C00D4C88A /* ModalBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBackground.swift; sourceTree = "<group>"; };
+		B1760DF12B9D6A5B00D4C88A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		B1760DF32B9D6A8A00D4C88A /* Dividers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dividers.swift; sourceTree = "<group>"; };
 		B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechuriRiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechuriRiOSApp.swift; sourceTree = "<group>"; };
 		B1A07A812AF5348300D5818F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1760DF72B9D919900D4C88A /* Alamofire in Frameworks */,
+				B1760DF92B9D919900D4C88A /* AlamofireDynamic in Frameworks */,
 				63D86F142B0E3E9200A28DEA /* GoogleSignIn in Frameworks */,
 				63D86F162B0E3E9200A28DEA /* GoogleSignInSwift in Frameworks */,
 			);
@@ -125,8 +137,8 @@
 		B12476522B0A6E460005117A /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				B12475D42B0559D10005117A /* AddFriendsView.swift */,
 				B12475D62B055AFA0005117A /* ListOfFriendsView.swift */,
+				B12475D42B0559D10005117A /* AddFriendsView.swift */,
 				B12B69CE2B0DF78300611515 /* ListOfMembersView.swift */,
 			);
 			path = Friends;
@@ -169,7 +181,8 @@
 				73B44C952B0E379800B0A4FC /* DiaryDetailMenuView.swift */,
 				73B44C942B0E379800B0A4FC /* DiaryDetailView.swift */,
 				B12475E22B0895D40005117A /* MakeNewDiaryView.swift */,
-				B10DE5EB2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift */,
+				B1760DED2B9D61A900D4C88A /* WriteDiaryView.swift */,
+				B1760DEB2B9D619C00D4C88A /* WriteLetterView.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -177,12 +190,15 @@
 		B1760DE02B9D499F00D4C88A /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				B1760DF12B9D6A5B00D4C88A /* Enums.swift */,
 				7C47A9CC2B0E46FB00D23510 /* CustomAlert.swift */,
+				B1760DF32B9D6A8A00D4C88A /* Dividers.swift */,
 				B12475DE2B05AF240005117A /* GoBackView.swift */,
 				B12475EC2B0913380005117A /* EmptyView.swift */,
 				7C47A9D52B0E486700D23510 /* CustomCorners.swift */,
 				7C47A9D72B0E486B00D23510 /* extensions.swift */,
 				7C47A9D92B0E486E00D23510 /* TabButton.swift */,
+				B1760DEF2B9D651C00D4C88A /* ModalBackground.swift */,
 				B124765B2B0A7A780005117A /* fonts */,
 			);
 			path = Items;
@@ -304,6 +320,8 @@
 			packageProductDependencies = (
 				63D86F132B0E3E9200A28DEA /* GoogleSignIn */,
 				63D86F152B0E3E9200A28DEA /* GoogleSignInSwift */,
+				B1760DF62B9D919900D4C88A /* Alamofire */,
+				B1760DF82B9D919900D4C88A /* AlamofireDynamic */,
 			);
 			productName = MechuriRiOS;
 			productReference = B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */;
@@ -335,6 +353,7 @@
 			mainGroup = B1A07A732AF5348300D5818F;
 			packageReferences = (
 				63D86F122B0E3E9200A28DEA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				B1760DF52B9D919900D4C88A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B1A07A7D2AF5348300D5818F /* Products */;
 			projectDirPath = "";
@@ -367,21 +386,24 @@
 			files = (
 				B12475DB2B055BA90005117A /* ReceivedLetterView.swift in Sources */,
 				B1A07A8E2AF534B900D5818F /* LoginView.swift in Sources */,
+				B1760DEC2B9D619C00D4C88A /* WriteLetterView.swift in Sources */,
 				B12476542B0A6F520005117A /* TeamMember.swift in Sources */,
 				7C47A9CD2B0E46FB00D23510 /* CustomAlert.swift in Sources */,
 				B12476562B0A6F5D0005117A /* Diary.swift in Sources */,
 				63D86F262B0E3EEE00A28DEA /* NextPageView.swift in Sources */,
+				B1760DF22B9D6A5B00D4C88A /* Enums.swift in Sources */,
 				B12475DD2B055BE30005117A /* AlarmView.swift in Sources */,
 				7C87D5562B0DD51D00C3F3EC /* MainViewCell.swift in Sources */,
 				63D86F292B0E3EF400A28DEA /* KaKaoAuthVM.swift in Sources */,
+				B1760DF42B9D6A8A00D4C88A /* Dividers.swift in Sources */,
 				7C47A9DA2B0E486E00D23510 /* TabButton.swift in Sources */,
 				B124764F2B0A6CCB0005117A /* NetworkManager.swift in Sources */,
 				7C47A9D82B0E486B00D23510 /* extensions.swift in Sources */,
 				B12475C72B051AE00005117A /* SideContentView.swift in Sources */,
 				B12475D92B055B4C0005117A /* SendLetterView.swift in Sources */,
+				B1760DF02B9D651C00D4C88A /* ModalBackground.swift in Sources */,
 				B124765A2B0A6F750005117A /* Notice.swift in Sources */,
 				B12475C02B050FD50005117A /* MainFrameView.swift in Sources */,
-				B10DE5EC2B0BDFCF00A30B5F /* MakeNewDiaryContentView.swift in Sources */,
 				B12475E32B0895D40005117A /* MakeNewDiaryView.swift in Sources */,
 				B12476512B0A6DAC0005117A /* ExDiary.swift in Sources */,
 				B12475DF2B05AF240005117A /* GoBackView.swift in Sources */,
@@ -397,6 +419,7 @@
 				63D86F272B0E3EEE00A28DEA /* UserData.swift in Sources */,
 				73B44C9A2B0E379800B0A4FC /* DiaryDetailCell.swift in Sources */,
 				B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */,
+				B1760DEE2B9D61A900D4C88A /* WriteDiaryView.swift in Sources */,
 				73B44C9C2B0E37CD00B0A4FC /* MainView.swift in Sources */,
 				B12475D52B0559D10005117A /* AddFriendsView.swift in Sources */,
 				B12475D72B055AFA0005117A /* ListOfFriendsView.swift in Sources */,
@@ -625,6 +648,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B1760DF52B9D919900D4C88A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,6 +668,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63D86F122B0E3E9200A28DEA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		B1760DF62B9D919900D4C88A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1760DF52B9D919900D4C88A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B1760DF82B9D919900D4C88A /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1760DF52B9D919900D4C88A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
