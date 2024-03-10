@@ -41,5 +41,7 @@ extension Font {
     static let Cafe2418: Font = .custom("Cafe24Ssurround", size: 18)
     
     //본문
+    static let Cafe24Air14: Font = .custom("Cafe24SsurroundAir", size: 14)
+    static let Cafe2414: Font = .custom("Cafe24Ssurround", size: 14)
     //
 }

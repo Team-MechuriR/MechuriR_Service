@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-//(민채)
-//MARK: 친구목록뷰
-
 struct ListOfMembersView: View {
+    @Environment(\.dismiss) var dismiss
+    
     private var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
@@ -68,33 +67,58 @@ struct ListOfMembersView: View {
                     .frame(width: 30,height: 30)
                 
                 HStack{
+                    Button {
+                        dismiss()
+                    } label: {
+                         Image(systemName: "arrow.left")
+                            .foregroundStyle(Color.fontColor)
+                            .font(.title3)
+                            .fontWeight(.heavy)
+                    }
                     
                     Spacer()
                     
-                    Text("친구 목록")
+                    Text("멤버 목록")
                         .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
-                        .offset(x: deviceSize.width / 15)//?
                     
-                   Spacer()
+                    Spacer()
                     
-                   Image(systemName: "person.badge.plus")
-                        .font(.title3)
-                        .padding()
-                } //갈색 상단바
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "person.badge.plus")
+                            .foregroundStyle(Color.fontColor)
+                            .font(.title3)
+                            .fontWeight(.heavy)
+                    }
+                }
+                .padding(.horizontal, 10)//갈색 상단바
                 .background(Rectangle()
                     .fill(Color.btnColor)
                     .frame(height: 40)
                 )
-//                List {
-//                    ForEach(dataExample, id: \.self.memberId) { teamMember in
-//                        Text("\(teamMember)")
-//                        
-//                    }
-//                }
-                
+                List {
+                    ForEach(dataExample, id: \.self.memberId) { teamMember in
+                        NavigationLink {
+                           WriteLetterView()
+                        } label: {
+                            HStack {
+                                Text(teamMember.memberName)
+                                    .font(.Cafe2414)
+                                
+                                Spacer()
+                                
+                                Image(systemName: "paperplane")
+                            }
+                        }
+                    }
+                }
+                .listRowSpacing(10)
+                .background(Color.bgColor)
+                .scrollContentBackground(.hidden)
+                .navigationBarBackButtonHidden()
             } //상단 탭바
-            
         }
     }
 }

@@ -37,11 +37,10 @@ struct DiaryDetailView: View {
                     //메추리랑 사이드바 여는 버튼
                     HStack {
                         Button {
-                            dismiss()
+                            
                         } label: {
-                            Text("<")
-                                .font(.Cafe2418)
-                                .foregroundStyle(Color.fontColor)
+                            Image(systemName: "arrow.left")
+                                .foregroundStyle(Color.bgColor)
                         }
                         .padding(.leading, 20)
                         
@@ -79,15 +78,26 @@ struct DiaryDetailView: View {
                         )
                         
                         HStack {
+                            Button {
+                                dismiss()
+                            } label: {
+                                 Image(systemName: "arrow.left")
+                                    .foregroundStyle(Color.fontColor)
+                                    .bold()
+                            }
+                            
                             Spacer()
-                            Button { isShowMenu.toggle() } label: {
+                            
+                            Button {
+                                isShowMenu.toggle()
+                            } label: {
                                 Image(systemName: "ellipsis")
-                                    .foregroundStyle(Color.gray)
+                                    .foregroundStyle(Color.fontColor)
                                     .bold()
                             }
                             .frame(width: 23, height: 20)
-                            .padding(.trailing, 20)
                         }
+                        .padding(.horizontal, 20)
                     }
                 }
                 .padding(.top, 50)
@@ -138,7 +148,6 @@ struct DiaryDetailView: View {
         .background(Color.bgColor)
         .background(ignoresSafeAreaEdges: .all)
         .navigationBarBackButtonHidden()
-        
         .onAppear {
             //MARK: 방에 있는 일기 리스트 ->  전 화면 모델에 없는 것 -> diaryId, userId, writing, img, 날씨
             self.diaryList = [

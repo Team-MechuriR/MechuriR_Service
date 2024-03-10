@@ -16,15 +16,15 @@ struct DiaryDetailMenuView: View {
                 NavigationLink {
                     switch i {
                     case 0:
-                        MakeNewDiaryContentView(diaryType: .diary)
+                        WriteDiaryView()
                     case 1:
-                        MakeNewDiaryContentView(diaryType: .diary)
+                        ListOfMembersView()
                     case 2:
-                        MakeNewDiaryContentView(diaryType: .diary)
+                        WriteDiaryView()
                     case 3:
-                        MakeNewDiaryContentView(diaryType: .diary)
+                        WriteDiaryView()
                     default:
-                        MakeNewDiaryContentView(diaryType: .diary)
+                        WriteDiaryView()
                     }
                 } label: {
                     Text("\(menuList[i])")
