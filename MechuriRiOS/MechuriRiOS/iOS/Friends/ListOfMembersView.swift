@@ -98,7 +98,3 @@ struct ListOfMembersView: View {
         }
     }
 }
-
-#Preview {
-    ListOfMembersView()
-}

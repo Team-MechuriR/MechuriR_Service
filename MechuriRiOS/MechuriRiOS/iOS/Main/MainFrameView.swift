@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainFrameView: View { //명칭 메인프레임뷰로 바꿀 예정
+struct MainFrameView: View {
     private var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
@@ -124,8 +124,4 @@ extension View {
         
         return UIScreen.main.bounds
     }
-}
-
-#Preview {
-    MainFrameView()
 }

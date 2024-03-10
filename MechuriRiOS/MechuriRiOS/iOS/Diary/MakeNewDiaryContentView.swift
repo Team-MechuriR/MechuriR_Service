@@ -225,7 +225,3 @@ struct NewContentDivider: View {
 			.background(Color.btnColor)
 	}
 }
-
-#Preview {
-	MakeNewDiaryContentView(diaryType: .letter)
-}

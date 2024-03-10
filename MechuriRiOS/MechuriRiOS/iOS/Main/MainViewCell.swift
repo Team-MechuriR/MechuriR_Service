@@ -29,15 +29,3 @@ struct MainViewCell: View {
         )
     }
 }
-
-#Preview {
-    MainViewCell(
-        diary: ExDiary(exDiaryId: 1,
-                       createdDate: "2023.09.22",
-                       modifiedDate: "",
-                       startDate: "2023.09.22",
-                       finishDate: "09.30",
-                       exDiaryName: "일기장 제목",
-                       createMemberName: "만채")
-    )
-}

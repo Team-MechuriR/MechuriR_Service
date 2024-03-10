@@ -46,7 +46,3 @@ struct DiaryDetailMenuView: View {
         }
     }
 }
-
-#Preview {
-    DiaryDetailMenuView()
-}

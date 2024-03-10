@@ -31,7 +31,3 @@ struct CustomAlert: View{
 		
 	}
 }
-
-#Preview {
-	CustomAlert(isPresentPopup: .constant(true))
-}

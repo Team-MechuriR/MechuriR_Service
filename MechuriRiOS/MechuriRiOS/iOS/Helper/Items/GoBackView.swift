@@ -33,7 +33,3 @@ struct GoBackView: View {
         }
     }
 }
-
-#Preview {
-    GoBackView()
-}

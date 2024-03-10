@@ -45,7 +45,3 @@ struct ReceivedLetterView: View {
         .frame(width: getRect().width, alignment: .leading)
     }
 }
-
-#Preview {
-    ReceivedLetterView()
-}

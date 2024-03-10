@@ -105,7 +105,3 @@ struct MakeNewDiaryView: View {
     }
 }
 
-
-#Preview {
-    MakeNewDiaryView(isPresented: .constant(false))
-}

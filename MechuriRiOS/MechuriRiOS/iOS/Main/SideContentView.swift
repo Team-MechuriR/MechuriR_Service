@@ -108,7 +108,3 @@ struct SideContentView: View {
     }
     
 }
-
-#Preview {
-    SideContentView(selectedTitle: .constant("Main"),selectedTab: .constant(TabSelector.main))
-}

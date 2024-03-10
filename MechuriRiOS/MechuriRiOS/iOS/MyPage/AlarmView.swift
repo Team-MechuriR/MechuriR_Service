@@ -1,5 +1,5 @@
 //
-//  ListOfFriendsView.swift
+//  AlarmView.swift
 //  MechuriRiOS
 //
 //  Created by 황민채 on 11/16/23.
@@ -7,11 +7,8 @@
 
 import SwiftUI
 
-//(민채)
-//MARK: 친구목록뷰
-
-struct ListOfFriendsView: View {
-    public var deviceSize: CGRect {
+struct AlarmView: View {
+    private var deviceSize: CGRect {
         return UIScreen.main.bounds
     }
     var body: some View {
@@ -19,7 +16,7 @@ struct ListOfFriendsView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1") //로고 이미지
+                Image("mechuri1")
                     .resizable()
                     .frame(width: 30,height: 30)
                 
@@ -27,7 +24,7 @@ struct ListOfFriendsView: View {
                     
                     Spacer()
                     
-                    Text("친구 목록")
+                    Text("알림")
                         .font(.Cafe2418)
                         .foregroundStyle(Color.fontColor)
                         .bold()
@@ -41,14 +38,10 @@ struct ListOfFriendsView: View {
                     .frame(width: deviceSize.width, height: 40)
                 )
                 
+                Spacer() // 아예 위에 딱 붙이는 방법은 없나?
                 
-                
-            } //상단 탭바
-            
+            }
         }
         .frame(width: getRect().width, alignment: .leading)
     }
-}
-#Preview {
-    ListOfFriendsView()
 }

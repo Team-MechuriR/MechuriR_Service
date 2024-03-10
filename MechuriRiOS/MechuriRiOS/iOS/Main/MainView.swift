@@ -133,7 +133,3 @@ extension MainView {
         }
     }
 }
-
-#Preview {
-    MainView()
-}

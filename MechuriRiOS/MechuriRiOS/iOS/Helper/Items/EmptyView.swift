@@ -14,7 +14,3 @@ struct EmptyView: View {
         }
     }
 }
-
-#Preview {
-    EmptyView()
-}

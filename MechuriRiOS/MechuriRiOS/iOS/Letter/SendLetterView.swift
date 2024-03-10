@@ -93,6 +93,3 @@ struct DetailsView: View {
         .background(Color.bgColor)
     }
 }
-#Preview {
-    SendLetterView()
-}
