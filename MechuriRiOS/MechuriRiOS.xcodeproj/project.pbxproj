@@ -50,6 +50,7 @@
 		B1760DF42B9D6A8A00D4C88A /* Dividers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DF32B9D6A8A00D4C88A /* Dividers.swift */; };
 		B1760DF72B9D919900D4C88A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1760DF62B9D919900D4C88A /* Alamofire */; };
 		B1760DF92B9D919900D4C88A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B1760DF82B9D919900D4C88A /* AlamofireDynamic */; };
+		B1760DFB2B9DAFDD00D4C88A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1760DFA2B9DAFDD00D4C88A /* AuthenticationViewModel.swift */; };
 		B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */; };
 		B1A07A822AF5348300D5818F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A07A812AF5348300D5818F /* ContentView.swift */; };
 		B1A07A842AF5348800D5818F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A07A832AF5348800D5818F /* Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		B1760DEF2B9D651C00D4C88A /* ModalBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBackground.swift; sourceTree = "<group>"; };
 		B1760DF12B9D6A5B00D4C88A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B1760DF32B9D6A8A00D4C88A /* Dividers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dividers.swift; sourceTree = "<group>"; };
+		B1760DFA2B9DAFDD00D4C88A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B1A07A7C2AF5348300D5818F /* MechuriRiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MechuriRiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A07A7F2AF5348300D5818F /* MechuriRiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechuriRiOSApp.swift; sourceTree = "<group>"; };
 		B1A07A812AF5348300D5818F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				B10DE5E92B0AFDFF00A30B5F /* ContentViewModel.swift */,
+				B1760DFA2B9DAFDD00D4C88A /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				73B44C9A2B0E379800B0A4FC /* DiaryDetailCell.swift in Sources */,
 				B1A07A802AF5348300D5818F /* MechuriRiOSApp.swift in Sources */,
 				B1760DEE2B9D61A900D4C88A /* WriteDiaryView.swift in Sources */,
+				B1760DFB2B9DAFDD00D4C88A /* AuthenticationViewModel.swift in Sources */,
 				73B44C9C2B0E37CD00B0A4FC /* MainView.swift in Sources */,
 				B12475D52B0559D10005117A /* AddFriendsView.swift in Sources */,
 				B12475D72B055AFA0005117A /* ListOfFriendsView.swift in Sources */,
