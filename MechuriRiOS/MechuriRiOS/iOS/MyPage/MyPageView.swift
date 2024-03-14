@@ -23,14 +23,14 @@ struct MyPageView: View {
                     .frame(width: 30,height: 30)
                 
                 HStack{
-//                    Button{
-//                        
-//                    }label: {
-//                        Image(systemName: "xmark")
-//                            .fontWeight(.heavy)
-//                            .padding(15)
-//                            .foregroundStyle(Color.fontColor)
-//                    }
+                    Button{
+                        // TODO: - xmark
+                    } label: {
+                        Image(systemName: "xmark")
+                            .fontWeight(.heavy)
+                            .padding(15)
+                            .foregroundStyle(Color.fontColor)
+                    }
                     
                     Spacer()
                     
@@ -41,19 +41,20 @@ struct MyPageView: View {
                     
                     Spacer()
                     
-//                    Button{
-//                        
-//                    }label: {
-//                        Image(systemName: "checkmark")
-//                            .fontWeight(.heavy)
-//                            .padding(15)
-//                            .foregroundStyle(Color.fontColor)
-//                    }
+                    Button{
+                        // TODO: - checkmark, save
+                    }label: {
+                        Image(systemName: "checkmark")
+                            .fontWeight(.heavy)
+                            .padding(15)
+                            .foregroundStyle(Color.fontColor)
+                    }
                 }
                 .background(Rectangle()
                     .fill(Color.btnColor)
                     .frame(width: deviceSize.width, height: 40)
                 )
+                
                 Image("sampleProfileImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
