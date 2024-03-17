@@ -14,6 +14,7 @@ struct MyPageView: View {
     @State var changedName: String = ""
     @State var output: String = "" // 임시
     @State var addFriendCode: String = ""
+    // @Binding var isPresented: Bool
     
     var body: some View {
         ZStack {
@@ -27,7 +28,7 @@ struct MyPageView: View {
                 // MARK: - TopCell
                 HStack{
                     Button{
-                        // TODO: - xmark
+                        //isPresented.toggle()
                     } label: {
                         Image(systemName: "xmark")
                             .fontWeight(.heavy)

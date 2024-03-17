@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct MakeNewDiaryView: View {
+    private var deviceSize: CGRect {
+        return UIScreen.main.bounds
+    }
     @State private var diaryName: String = "".precomposedStringWithCanonicalMapping
     @State private var selectedDate = Date()
+    @State private var selectedPlace = ""
+    @State private var writeDescription = ""
     @State private var selectedColor: Color = Color.teal
+    @State private var selectMembers = ""
     @FocusState var focusField: Bool
     @Binding var isPresented: Bool
     
@@ -83,37 +89,92 @@ struct MakeNewDiaryView: View {
                     
                     // 3
                     HStack {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("장소")
+                        Image("placeIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundStyle(Color.fontColor)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 5)
+                        TextField(text: $selectedPlace, prompt: Text("장소")
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.emptyFontColor),
+                                  label: {})
+                        .foregroundStyle(Color.fontColor)
+                        .font(.Cafe2418) //텍스트 썼을 경우에
                     }
-                    .padding(.leading, 10)
                     
-                    
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
+
+                    // 4
                     HStack {
-                        Image(systemName: "doc.plaintext")
-                        Text("설명")
+                        Image("descriptionIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundStyle(Color.fontColor)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 5)
+                        TextField(text: $writeDescription, prompt: Text("설명")
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.emptyFontColor),
+                                  label: {})
+                        .foregroundStyle(Color.fontColor)
+                        .font(.Cafe2418) //텍스트 썼을 경우에
                     }
-                    .padding(.leading, 10)
-                    
-                    
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
+
+                    // 5
                     HStack {
-                        Image(systemName: "paintpalette")
+                        Image("colorIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.fontColor)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 5)
+
                         ColorPicker("색상", selection: $selectedColor)
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.emptyFontColor)
                     }
-                    .padding(.leading, 10)
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
                     
+                    // 6
                     HStack {
-                        Image(systemName: "person.3")
-                        Text("멤버")
-                        Spacer()
+                        Image("membersIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                            .foregroundStyle(Color.fontColor)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 5)
+                        TextField(text: $selectMembers, prompt: Text("멤버")
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.emptyFontColor),
+                                  label: {})
+                        .foregroundStyle(Color.fontColor)
+                        .font(.Cafe2418) //텍스트 썼을 경우에
+                        
                         Button {
-                            
+                            // 친구 추가
                         } label: {
                             Image(systemName: "plus")
-                        }
+                                .fontWeight(.heavy)
+                                .foregroundStyle(Color.fontColor)
+                                .padding(.horizontal, 15)
+                            .padding(.vertical, 5)                }
+                        
                     }
-                    .padding(.leading, 1)
-                    
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
                 } // List
                 .listRowSpacing(2)
                 .scrollContentBackground(.hidden) // 이게 있어야 리스트 백그라운드 컬러 수정 가능함
