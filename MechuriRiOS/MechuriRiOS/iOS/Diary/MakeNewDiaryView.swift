@@ -53,16 +53,35 @@ struct MakeNewDiaryView: View {
                     .frame(height: 40)
                 )
                 
-                List {
+                VStack {
+                    VStack {
+                        TextField(text: $diaryName, prompt: Text("일기장 이름을 입력하세요.")
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.emptyFontColor),
+                                  label: {})
+                        .padding(.horizontal, 15)
+                        .foregroundStyle(Color.fontColor)
+                        .font(.Cafe2418) //텍스트 썼을 경우에
+                    }
+                    .frame(height: 35)
                     
-                    TextField("일기장 이름을 입력하세요.", text: $diaryName)
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
                     
-                        .padding(.leading, 10)
-                        .keyboardType(.default)
-        
-                    DatePicker("날짜", selection: $selectedDate)
-                        .padding(.leading, 10)
                     
+                    // 2
+                    HStack {
+                        DatePicker("날짜", selection: $selectedDate)
+                            .font(.Cafe2418)
+                            .foregroundStyle(Color.fontColor)
+                            .padding(.leading, 10)
+                    }
+                    Divider()
+                        .frame(height: 2)
+                        .background(Color.deviderColor)
+                    
+                    // 3
                     HStack {
                         Image(systemName: "mappin.and.ellipse")
                         Text("장소")
