@@ -16,6 +16,9 @@ extension Color {
     static let borderColor = Color("borderColor")
     static let nameColor = Color("nameColor")
     static let fontColor = Color("fontColor")
+    static let deviderColor = Color("deviderColor")
+    static let diaryBgColor = Color("diaryBgColor")
+    static let emptyFontColor = Color("emptyFontColor")
 }
 
 
