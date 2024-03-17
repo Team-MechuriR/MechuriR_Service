@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// "마이페이지" "친구 목록" "친구 추가" "받은 편지" "보낸 편지" ""
+// "마이페이지" "친구 목록" "친구 추가" "받은 편지" "보낸 편지"
 enum TabSelector: String, CaseIterable {
     case main = "메인"
     case myPage = "마이페이지"
@@ -31,7 +31,6 @@ struct SideContentView: View {
             Color.sideViewColor.ignoresSafeArea()
             VStack {
                 HStack {
-                    
                     Image("sampleProfileImage")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -57,8 +56,6 @@ struct SideContentView: View {
                             .fontWeight(.heavy)
                     }
                     .foregroundStyle(Color.white)
-                    
-                    
                 }
                 .padding([.leading, .trailing], 30)
                 .padding(.top, 80)

@@ -62,9 +62,12 @@ struct ListOfMembersView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1") //로고 이미지
-                    .resizable()
-                    .frame(width: 30,height: 30)
+                VStack {
+                    Image("mechuri1") //로고 이미지
+                        .resizable()
+                        .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 HStack{
                     Button {

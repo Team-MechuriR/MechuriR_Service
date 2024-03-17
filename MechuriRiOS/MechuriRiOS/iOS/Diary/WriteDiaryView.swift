@@ -32,7 +32,8 @@ struct WriteDiaryView: View {
                     Image("mechuri1")
                         .resizable()
                         .frame(width: 30,height: 30)
-                } // 프레임
+                }
+                .frame(height: 40)
                 
                 VStack {
                     HStack {

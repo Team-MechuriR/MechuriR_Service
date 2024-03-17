@@ -22,11 +22,8 @@ struct MakeNewDiaryView: View {
     
     var body: some View {
         ZStack {
-            
             VStack {
-                
                 HStack {
-                    
                     Button{
                         isPresented.toggle()
                     }label: {
@@ -54,6 +51,7 @@ struct MakeNewDiaryView: View {
                             .foregroundStyle(Color.fontColor)
                     }
                 }
+                .padding(.horizontal, 10)//갈색 상단바
                 .background(Rectangle()
                     .fill(Color.btnColor)
                     .frame(height: 40)
@@ -179,9 +177,12 @@ struct MakeNewDiaryView: View {
                 .listRowSpacing(2)
                 .scrollContentBackground(.hidden) // 이게 있어야 리스트 백그라운드 컬러 수정 가능함
                 .background(Color.bgColor)
+                
+                Spacer()
             }
+//            .background(ClearBackground())
+            .background(Color.bgColor)
         }
-        .background(Color.bgColor)
     }
 }
 

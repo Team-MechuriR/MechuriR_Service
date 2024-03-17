@@ -19,14 +19,14 @@ struct AddFriendsView: View {
     
     @State private var dataExample: [TeamMember] = [] // 초기 상태는 비어있는 배열
     
-//    func loadData() {
-//        let urlString = "http://localhost:8080/api/mate/searchMate?userId=박수현"
-//        
-//        Alamofire.request(urlString, method: .get).responseDecodable(of: [TeamMember].self) { response in
-//            guard let members = response.value else { return }
-//            self.dataExample = members
-//        }
-//    }
+    //    func loadData() {
+    //        let urlString = "http://localhost:8080/api/mate/searchMate?userId=박수현"
+    //        
+    //        Alamofire.request(urlString, method: .get).responseDecodable(of: [TeamMember].self) { response in
+    //            guard let members = response.value else { return }
+    //            self.dataExample = members
+    //        }
+    //    }
     
     var filteredMembers: [TeamMember] {
         if searchText.isEmpty {
@@ -41,9 +41,12 @@ struct AddFriendsView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1") //로고 이미지
-                    .resizable()
-                    .frame(width: 30,height: 30)
+                VStack {
+                    Image("mechuri1") //로고 이미지
+                        .resizable()
+                        .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 HStack {
                     Button {
@@ -125,7 +128,7 @@ struct AddFriendsView: View {
                 .navigationBarBackButtonHidden()
             } //상단 탭바
         }
-       //.onAppear(perform: loadData)
+        //.onAppear(perform: loadData)
     }
 }
 

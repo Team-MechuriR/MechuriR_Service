@@ -32,7 +32,8 @@ struct WriteLetterView: View {
                     Image("mechuri1")
                         .resizable()
                         .frame(width: 30,height: 30)
-                } // 프레임
+                }
+                .frame(height: 40)
                 
                 VStack {
                     HStack {
@@ -64,9 +65,10 @@ struct WriteLetterView: View {
                                 .foregroundStyle(Color.fontColor)
                         }
                     }
+                    .padding(.horizontal, 10)//갈색 상단바
                     .background(Rectangle()
                         .fill(Color.btnColor)
-                        .frame(width: width, height: 40)
+                        .frame(height: 40)
                     )
                     
                     TextField(text: $diaryContentName,

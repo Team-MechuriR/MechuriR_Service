@@ -45,10 +45,13 @@ struct AlarmView: View {
         ZStack {
             Color("bgColor").ignoresSafeArea()
             
-            VStack{
-                Image("mechuri1") //로고 이미지
-                    .resizable()
-                    .frame(width: 30,height: 30)
+            VStack {
+                VStack {
+                    Image("mechuri1") //로고 이미지
+                        .resizable()
+                        .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 HStack{
                     Spacer()

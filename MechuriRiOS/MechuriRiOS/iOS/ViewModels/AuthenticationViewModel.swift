@@ -7,24 +7,24 @@
 
 import Foundation
 
-class AuthenticationViewModel: ObservableObject {
-    
-    @Published var nameID = ""
-    
-    func signUpUser() async {
-        let initialUserData = [
-            "username": "",
-            "lowercasedName": "",
-            "id": userId,
-            "nameID": nameID,
-            "date": year,
-            "phoneNumber": "+82\(phoneNumber)",
-            "fcmToken": userToken,
-            "alertAccept": acceptAlert,
-            "instaAddress": "",
-            "tiktokAddress": "",
-            "openHighlight": "yes"
-        ]
-        userNameID = nameID
-    }
-}
+//class AuthenticationViewModel: ObservableObject {
+//    
+//    @Published var nameID = ""
+//    
+////    func signUpUser() async {
+////        let initialUserData = [
+////            "username": "",
+////            "lowercasedName": "",
+////            "id": userId,
+////            "nameID": nameID,
+////            "date": year,
+////            "phoneNumber": "+82\(phoneNumber)",
+////            "fcmToken": userToken,
+////            "alertAccept": acceptAlert,
+////            "instaAddress": "",
+////            "tiktokAddress": "",
+////            "openHighlight": "yes"
+////        ]
+////        userNameID = nameID
+////    }
+//}

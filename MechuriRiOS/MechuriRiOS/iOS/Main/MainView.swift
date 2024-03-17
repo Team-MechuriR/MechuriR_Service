@@ -94,9 +94,12 @@ struct MainView: View { //메인뷰
 extension MainView {
     private var titleView: some View {
         VStack {
+            VStack {
             Image("mechuri1")
                 .resizable()
                 .frame(width: 30,height: 30)
+            }
+            .frame(height: 40)
             
             HStack{
                 Text("[username] 의 일기장")
@@ -126,7 +129,7 @@ extension MainView {
                         .font(.system(size: 56)) //그림자로 하려면 버튼 이미지로 생성해서 clipshape 설정하고 shadow 값 주면 되지만 일단 귀찮으니 패스
                         .padding()
                 }
-                .fullScreenCover(isPresented: $showMakeNewDiaryView) {
+                .sheet(isPresented: $showMakeNewDiaryView) {
                     MakeNewDiaryView(isPresented: $showMakeNewDiaryView)
                 }
             }

@@ -32,9 +32,12 @@ struct SendLetterView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1")
-                    .resizable()
-                    .frame(width: 30,height: 30)
+                VStack {
+                    Image("mechuri1")
+                        .resizable()
+                        .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 HStack{
                     
@@ -49,6 +52,7 @@ struct SendLetterView: View {
                     Spacer()
                     
                 }
+                .padding(.horizontal, 10)//갈색 상단바
                 .background(Rectangle()
                     .fill(Color.btnColor)
                     .frame(width: deviceSize.width, height: 40)

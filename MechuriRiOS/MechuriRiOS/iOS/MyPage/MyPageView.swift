@@ -21,9 +21,12 @@ struct MyPageView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
+                VStack {
                 Image("mechuri1")
                     .resizable()
                     .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 // MARK: - TopCell
                 HStack{
@@ -33,7 +36,7 @@ struct MyPageView: View {
                         Image(systemName: "xmark")
                             .fontWeight(.heavy)
                             .padding(15)
-                            .foregroundStyle(Color.fontColor)
+                            .foregroundStyle(Color.btnColor)
                     }
                     
                     Spacer()
@@ -54,9 +57,10 @@ struct MyPageView: View {
                             .foregroundStyle(Color.fontColor)
                     }
                 }
+                .padding(.horizontal, 10)//갈색 상단바
                 .background(Rectangle()
                     .fill(Color.btnColor)
-                    .frame(width: deviceSize.width, height: 40)
+                    .frame(height: 40)
                 )
                 
                 // image

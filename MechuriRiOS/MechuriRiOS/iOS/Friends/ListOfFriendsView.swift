@@ -62,16 +62,19 @@ struct ListOfFriendsView: View {
             Color("bgColor").ignoresSafeArea()
             
             VStack{
-                Image("mechuri1") //로고 이미지
-                    .resizable()
-                    .frame(width: 30,height: 30)
+                VStack {
+                    Image("mechuri1") //로고 이미지
+                        .resizable()
+                        .frame(width: 30,height: 30)
+                }
+                .frame(height: 40)
                 
                 HStack{
                     Button {
                         
                     } label: {
                          Image(systemName: "arrow.left")
-                            .foregroundStyle(Color.bgColor)
+                            .foregroundStyle(Color.btnColor)
                             .font(.title3)
                             .fontWeight(.heavy)
                     }
@@ -88,7 +91,7 @@ struct ListOfFriendsView: View {
                         
                     } label: {
                         Image(systemName: "person.badge.plus")
-                            .foregroundStyle(Color.bgColor)
+                            .foregroundStyle(Color.fontColor)
                             .font(.title3)
                             .fontWeight(.heavy)
                     }
